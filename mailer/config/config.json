@@ -1,0 +1,8 @@
+{
+    "privateInterface" : "localhost",
+    "port": 8320,
+      "mailOptions": {
+        "sourceEmail": "clue.analytics.info@gmail.com",
+        "password": "4lzahraa2"
+      }
+}

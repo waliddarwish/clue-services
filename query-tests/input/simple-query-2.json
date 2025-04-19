@@ -1,0 +1,17 @@
+{
+    "id": "29d7cad1-bf37-4033-bfa7-72a0fad4a110",
+    "rowLimit": 100000,
+    "selectDistinct": true,
+    "generateQueryOnly": false,
+    "projections": [
+        {
+            "id": "293fd50b-fb5d-4d8b-bd26-81c0e3abf99a",
+            "modelObjectItemId": "8a411c56-f22c-41c5-a367-f0d96fe61228",
+            "aggregation": "None"
+        },
+        {
+            "id": "1aaf1c51-ff3d-451a-be2f-cc9deae78812",
+            "modelObjectItemId": "7a4d7b48-4bf5-4c4a-b9d0-588e0f0cd272"
+        }
+    ]
+}

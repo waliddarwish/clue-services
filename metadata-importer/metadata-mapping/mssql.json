@@ -1,0 +1,189 @@
+{
+    "bigint": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "bit": {
+        "usageType": "Boolean",
+        "usage": "Fact",
+        "defaultAggregation": "Count"
+    },
+    "decimal": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "int": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "money": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "numeric": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "smallint": {
+        "usageType": "Number",
+        "usage": "Dimension",
+        "defaultAggregation": "Sum"
+    },
+    "smallmoney": {
+        "usageType": "Number",
+        "usage": "Dimension",
+        "defaultAggregation": "Sum"
+    },
+    "tinyint": {
+        "usageType": "Number",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "float": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "real": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+
+
+    "date": {
+        "usageType": "Date",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "datetime2": {
+        "usageType": "Date",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "datetime": {
+        "usageType": "Date",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "datetimeoffset": {
+        "usageType": "Date",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "smalldatetime": {
+        "usageType": "Date",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "time": {
+        "usageType": "Timestamp",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+
+
+
+
+
+    "char": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "varchar": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "text": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "nchar": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "ntext": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "nvarchar": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "binary": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "varbinary": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "image": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+
+
+
+
+    "cursor": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "hierarchyid": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "sql_variant": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "geometry": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "table": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+
+    "rowversion": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "uniqueidentifier": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "xml": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "geography": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    }
+}

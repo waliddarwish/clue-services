@@ -1,0 +1,29 @@
+[{
+	"_id": {
+		"$oid": "5eb127735842f40f85226ba2"
+	},
+	"metadataConnectionCount": 0,
+	"dataConnectionCount": 0,
+	"maxMetadataConnectionCount": 2,
+	"maxDataConnectionCount": 8,
+	"metadataConcurrency": 1,
+	"dataConcurrency": 2,
+	"maxAcquireConnectionRetry": 5,
+	"acquireConnectionSleepDuration": 1000,
+	"name": "Postgres",
+	"connectionType": "Postgres",
+	"connectionInfo": {
+		"serverName": "localhost",
+		"serverPort": 5432,
+		"serviceName": "dvdrental",
+		"connectionProperties": [],
+		"username": "postgres",
+		"password": "Q0nl+ZsqhuLXFfJ8Bj31ElsjlTdr7MRxethnkYsLqY8NH5ypAPRnAyO56rbuD8DaOC5bmfCKIalyhkXPA/h40DTgOK0/lw8X1U39SffPCsbK0FQPackMMFc5PUVoWTV5mwsbzpg5/RDf6Aq6rdkCy8iJ3asAeffm98CO/9fivub9X85o6kg4O5O8QmFs72mpIPiyIl7gmHH/wwXaLldkGI/F17YrqDUTLCle66RuTqs2nrjGb37Xbyt8pYN0wRiP13q6DrbujmOF7Ns56qhypV4KbVoKKp2aBU525iNXjeGEP7ShXx6mtJbJiTMGnx/DGae/5sbJF4oCg3+Xh1A1/w=="
+	},
+	"id": "e033174a-5d98-4b63-a24a-bf7fb741a5ba",
+	"userId": "da7a431a-5e05-4da1-8d75-db35c739952b",
+	"tenantId": "8763885b-c027-47a1-b5fe-a8b42abacf7a",
+	"lastAccess": 1.588668275322E+12,
+	"__v": 0
+}]
+

@@ -1,0 +1,172 @@
+{
+    "tsvector": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "interval": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "character": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "smallint": {
+        "usageType": "Number",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "name": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "inet": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "pg_node_tree": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "boolean": {
+        "usageType": "Boolean",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "text": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "numeric": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "anyarray": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "regproc": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "regtype": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "USER-DEFINED": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "timestamp with time zone": {
+        "usageType": "Timestamp",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "bigint": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "double precision": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "ARRAY": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "pg_ndistinct": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "pg_mcv_list": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "pg_dependencies": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "date": {
+        "usageType": "Date",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "xid": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "char": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "timestamp without time zone": {
+        "usageType": "Timestamp",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "character varying": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "bytea": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "integer": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "pg_lsn": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "real": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "oid": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "decimal": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "timestamp": {
+        "usageType": "Timestamp",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "number": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    }
+}

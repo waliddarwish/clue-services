@@ -1,0 +1,50 @@
+[
+    {
+        "metadataConnectionCount": 0,
+        "dataConnectionCount": 0,
+        "maxMetadataConnectionCount": 2,
+        "maxDataConnectionCount": 8,
+        "metadataConcurrency": 1,
+        "dataConcurrency": 2,
+        "maxAcquireConnectionRetry": 5,
+        "acquireConnectionSleepDuration": 1000,
+        "name": "Oracle - 1",
+        "connectionType": "Oracle",
+        "connectionInfo": {
+            "serverName": "62.151.176.216",
+            "serverPort": 1521,
+            "serviceName": "SAMPLES.localdomain",
+            "connectionProperties": [],
+            "username": "OTUSER",
+            "password": "g+3USpVgE6APQu9ii9rqXm6fX79XY7wPKjc+sfIfz25zxqJRCd+kR/uYYrm2f4xmZdAe9KmsBTaPPQKPieurZZZ0xVW+4vBzOyu7wsqFF3DNeK6Nfy+581+IPrZez6KxQGgcY0NY7FYtHoV4oel0hvZxrbcETsD2RhoT5kPMPBJdQrxYBuMGyUKoo3bpRiVnutn/mbZXTasynSluYmculhZmMQyz3+QPhHCw+nPMyItiLTYX2lHzIJh/fAM8mEzt0Wvy3dY8U2msD8sT31KRNKGbqWl/8NATBRfyVQn1cCmxp1IwZ9UAAnLbX0lz4K18n4tmIFkRgZRHgtkPsbWXQg=="
+        },
+        "id": "fd4a3f9d-82cb-4463-9f39-f81fcd3aed0e",
+        "userId": "2bc609ab-73e1-44e8-8c14-598592a6ac78",
+        "tenantId": "dfd05429-b67a-4a4a-8e49-e2515a1b8d07",
+        "lastAccess": 1584410968519
+    },
+    {
+        "metadataConnectionCount": 0,
+        "dataConnectionCount": 0,
+        "maxMetadataConnectionCount": 2,
+        "maxDataConnectionCount": 8,
+        "metadataConcurrency": 1,
+        "dataConcurrency": 2,
+        "maxAcquireConnectionRetry": 5,
+        "acquireConnectionSleepDuration": 1000,
+        "name": "dvd-rentals",
+        "connectionType": "Postgres",
+        "connectionInfo": {
+            "serverName": "62.151.176.216",
+            "serverPort": 5432,
+            "serviceName": "dvdrental",
+            "connectionProperties": [],
+            "username": "postgres",
+            "password": "dVTfLtc79J0lEBqGEEolbIaEBfNCTuL/TiM/IGdVUidkHha/OB9NVxE2yImii72rtNkWyqDy1XlXQYhQDB6556OTY4m0pvfbh2G3kpwZr8vpKn2GYqHk/eReKIGYyLAmw9hn0SqXfDcPJMmfk5WNgu1Y9QM8pRCGuO2ODND/rYG8ld+liJlsP9oTkv+ZO1+kbwRxbv25Le84hNSEWX9saSLBSRdr7Q57lkS63QwuVCtDmov+dRz9GcPcoEFcVRL0MF04/b/6IqfK44Ag6bBDAzAjv0enycwPsOA4srZOWQ8w7NEUAiT+rp/VA5ar6PNt/Cy2WxdakqSTNK9pn5Pcig=="
+        },
+        "id": "78f4da19-6986-49a8-a95b-9c1ad2d4585b",
+        "userId": "2bc609ab-73e1-44e8-8c14-598592a6ac78",
+        "tenantId": "dfd05429-b67a-4a4a-8e49-e2515a1b8d07",
+        "lastAccess": 1583886319069
+    }
+]

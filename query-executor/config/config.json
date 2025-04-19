@@ -1,0 +1,26 @@
+{
+    "privateInterface": "localhost",
+    "port": 8420,
+    "catalogs": {
+        "poolSize": 16,
+        "connectTimeoutMS": 120000,
+        "socketTimeoutMS": 120000,
+        "reconnectInterval": 5000,
+        "reconnectTries": 60,
+        "initialConnectionRetryInterval" : 5000,
+        "catalogConfig": {
+          "mongoConfig": {
+            "hosts": [
+              {
+                "host": "mongos-router0",
+                "port": 27017
+              }
+            ]
+          }
+        }
+    },
+    "clueDataStore": {
+        "host": "dataset-store-node-1",
+        "port": 9600
+    }
+}

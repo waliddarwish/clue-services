@@ -1,0 +1,85 @@
+{
+  "name": "dataset-controller",
+  "version": "1.1.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "start": "ts-node -r tsconfig-paths/register src/main.ts",
+    "start:dev": "nodemon",
+    "start:debug": "nodemon --config nodemon-debug.json",
+    "start:prod": "node dist/main.js",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" ",
+    "lint-fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "precommit": "lint-staged",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "compile-ts": "tsc --p ."
+  },
+  "dependencies": {
+    "@nestjs/common": "6.10.1",
+    "@nestjs/core": "6.10.1",
+    "@nestjs/platform-express": "6.10.1",
+    "@nestjs/platform-fastify": "6.10.1",
+    "csv-string": "^4.0.1",
+    "download": "^8.0.0",
+    "exceljs": "^4.1.1",
+    "fs": "0.0.1-security",
+    "hashmap": "^2.4.0",
+    "is-number": "^7.0.0",
+    "luxon": "^1.22.2",
+    "moment": "^2.28.0",
+    "mongoose": "5.9.20",
+    "node-fetch": "^2.6.0",
+    "oracledb": "4.0.1",
+    "pg": "8.3.0",
+    "read-source-stream": "^1.0.4",
+    "reflect-metadata": "0.1.13",
+    "request": "^2.88.2",
+    "rimraf": "2.6.2",
+    "rxjs": "6.3.3",
+    "shelljs": "^0.8.3",
+    "string-sanitizer": "^1.1.1",
+    "xlsx": "^0.16.6"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "6.0.0",
+    "@types/express": "4.16.1",
+    "@types/jest": "24.0.11",
+    "@types/node": "11.13.4",
+    "@types/supertest": "2.0.7",
+    "jest": "24.7.1",
+    "prettier": "1.17.0",
+    "supertest": "4.0.2",
+    "ts-jest": "24.0.2",
+    "ts-node": "8.1.0",
+    "tsc-watch": "2.2.1",
+    "tsconfig-paths": "3.8.0",
+    "typescript": "^3.9.5",
+    "husky": "4.2.5",
+    "lint-staged": "10.2.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node"
+  }
+}

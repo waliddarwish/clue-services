@@ -1,0 +1,73 @@
+{
+    "id": "12", 
+    "rowLimit": "100",
+    "ignoreCache": "true",
+    "projections": [
+        {
+            "id": "1",
+            "modelObjectItemId": "09cb07d5-2641-4f70-a838-2914db147f38",
+            "aggregation": "123" 
+        },{
+            "id": "2",
+            "modelObjectItemId": "f8e71e0f-09cb-4a64-940a-b900eb651523",
+            "aggregation": "123" 
+        },{
+            "id": "3",
+            "modelObjectItemId": "76cd12f1-84a3-4dc6-a912-32f44d6db320",
+            "aggregation": "123" 
+        },{
+            "id": "5",
+            "modelObjectItemId": "e27779d8-fa20-4d03-a38d-16ea9c07d06e",
+            "aggregation": "123" 
+        },{
+            "id": "6",
+            "modelObjectItemId": "f3b590cd-135d-41b9-b6d0-b0d7ff446607",
+            "aggregation": "123" 
+        },{
+            "id": "7",
+            "modelObjectItemId": "38e7d52d-0783-4487-969c-1d894bffe9c2",
+            "aggregation": "123" 
+        },{
+            "id": "8",
+            "modelObjectItemId": "e049139a-2d9c-4bcf-8754-90fcd6dd0c80",
+            "aggregation": "123" 
+        },{
+            "id": "9",
+            "modelObjectItemId": "dc176a0c-27de-40a9-a489-7d2b4f7eb66b",
+            "aggregation": "123" 
+        },{
+            "id": "10",
+            "modelObjectItemId": "9a4f9685-ae7a-4177-a4fd-32cd87c861a9",
+            "aggregation": "123" 
+        },{
+            "id": "11",
+            "modelObjectItemId": "f9c9d467-bc72-4b93-97d1-b9dc489670e3",
+            "aggregation": "123" 
+        },{
+            "id": "12",
+            "modelObjectItemId": "a18d012a-0341-47e3-9af5-139c24ff4fa0",
+            "aggregation": "123" 
+        },{
+            "id": "13",
+            "modelObjectItemId": "f5df98c6-4c13-4751-9a99-fde6a4d4c8eb",
+            "aggregation": "123" 
+        },{
+            "id": "14",
+            "modelObjectItemId": "6f3d4db8-3324-41ed-a548-3f1c55525459",
+            "aggregation": "123" 
+        },{
+            "id": "15",
+            "modelObjectItemId": "ad6199c6-7acc-469d-a497-79b44ff2c4d3",
+            "aggregation": "123" 
+        },{
+            "id": "16",
+            "modelObjectItemId": "0fcae07a-33e4-40f1-a8c5-e6556bcd6145",
+            "aggregation": "123" 
+        }
+    ],
+    "sorts": [{
+        "id": "1",
+        "type": "string"
+    }]
+
+}

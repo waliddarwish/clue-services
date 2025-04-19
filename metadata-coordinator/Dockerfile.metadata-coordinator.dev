@@ -1,0 +1,28 @@
+FROM clueanalytics/dependencies
+
+WORKDIR /home/src/metadata-coordinator
+
+COPY package.json ./
+COPY tsconfig*.json ./
+COPY nodemon.json ./
+
+RUN npm install
+
+COPY . ./
+RUN rm -Rf databases/macos/
+
+RUN rm -fr /home/src/catalog-module/ \
+    /home/src/clue-dfs-module/ \
+    /home/src/connection-test-module/ \
+    /home/src/datasets-controller-module/ \
+    /home/src/globalization-module/ \
+    /home/src/graph-data-structure/ \
+    /home/src/mail-module/ \
+    /home/src/metadata-coordination-module/ \
+    /home/src/query-executor-module/ \
+    /home/src/query-generator-module/ \
+    /home/src/scheduler-module/ \
+    /home/src/metadata-importer/metadata-mapping/
+
+EXPOSE 8380
+CMD ["npm","start"]

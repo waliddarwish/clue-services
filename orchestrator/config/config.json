@@ -1,0 +1,36 @@
+{
+  "orchConfig": {
+    "saAppMode": "dev",
+    "saPort": 8240,
+    "rateWindow": 1000,
+    "rate": 100,
+    "privateInterface": "localhost",
+    "piblicInterface": "<public IP goes here>",
+    "keepAliveIntervalSeconds": 30,
+    "removeDeadNodesAfterMinutes": 30,
+    "sessionMaxLiveMilliseconds": 1800000,
+    "saveQueryResults": 0
+  },
+  "catalogs": {
+    "poolSize": 16,
+    "connectTimeoutMS": 120000,
+    "socketTimeoutMS": 120000,
+    "reconnectInterval": 5000,
+    "reconnectTries": 60,
+    "initialConnectionRetryInterval" : 5000,
+    "catalogConfig": {
+      "mongoConfig": {
+        "hosts": [
+          {
+            "host": "mongos-router0",
+            "port": 27017
+          }
+        ]
+      }
+    }
+  },
+  "clueDFS": {
+    "host": "dfs-master-001",
+    "port": 9500
+  }
+}

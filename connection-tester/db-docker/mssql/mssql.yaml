@@ -1,0 +1,17 @@
+# Use root/example as user/password credentials
+version: '3.2'
+
+services:
+
+  db:
+    container_name: sql-server-db
+    image: mcr.microsoft.com/mssql/server
+    restart: always
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: "Ottawa@12345"
+      MSSQL_TCP_PORT: 1433 
+    volumes:
+      - ./samples:/samples
+    ports:
+      - 1433:1433

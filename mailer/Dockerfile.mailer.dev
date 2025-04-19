@@ -1,0 +1,39 @@
+FROM clueanalytics/dependencies
+
+RUN apt-get update  -y 
+RUN apt-get upgrade  -y 
+RUN apt-get install  -y build-essential 
+RUN npm install -g node-gyp
+RUN apt-get install  -y  python 
+RUN apt-get install  -y  make
+
+WORKDIR /home/src/mailer
+
+COPY package.json ./
+COPY tsconfig*.json ./
+COPY nodemon.json ./
+
+RUN npm install
+
+COPY . ./
+
+RUN rm -fr /home/src/authentication-module/ \
+    /home/src/catalog-module/ \
+    /home/src/clue-dfs-module/ \
+    /home/src/connection-test-module/ \
+    /home/src/connection-tracking-module/ \
+    /home/src/database-module/ \
+    /home/src/datasets-controller-module/ \
+    /home/src/globalization-module/ \
+    /home/src/graph-data-structure/ \
+    /home/src/mail-module/ \
+    /home/src/metadata-coordination-module/ \
+    /home/src/metadata-importing-module/ \
+    /home/src/object-schema/ \
+    /home/src/query-executor-module/ \
+    /home/src/query-generator-module/ \
+    /home/src/scheduler-module/ \
+    /home/src/metadata-importer/metadata-mapping/
+
+EXPOSE 8320
+CMD ["npm","start"]

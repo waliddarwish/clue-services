@@ -1,0 +1,44 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: "circleci/node:latest"
+    steps:
+      - checkout
+      - run: ./build-local-dev-env.sh
+      - run: ./compile-all-services.sh
+      - run: ./run-unit-test-locally.sh
+      - store_artifacts:
+          path: app-module/src/coverage
+      - store_artifacts:
+          path: clue-dfs-module/src/coverage
+      - store_artifacts:
+          path: connection-test-module/src/coverage
+      - store_artifacts:
+          path: connection-tester/src/coverage
+      - store_artifacts:
+          path: connection-tracking-module/src/coverage
+      - store_artifacts:
+          path: dataset-controller/src/coverage
+      - store_artifacts:
+          path: globalization-module/src/coverage
+      - store_artifacts:
+          path: mail-module/src/coverage
+      - store_artifacts:
+          path: mailer/src/coverage
+      - store_artifacts:
+          path: metadata-coordination-module/src/coverage
+      - store_artifacts:
+          path: metadata-coordinator/src/coverage
+      - store_artifacts:
+          path: metadata-importer/src/coverage
+      - store_artifacts:
+          path: metadata-importing-module/src/coverage
+      - store_artifacts:
+          path: query-executor-module/src/coverage
+      - store_artifacts:
+          path: query-executor/src/coverage
+      - store_artifacts:
+          path: query-generator-module/src/coverage
+      - store_artifacts:
+          path: query-generator/src/coverage

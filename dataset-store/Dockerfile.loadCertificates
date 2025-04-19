@@ -1,0 +1,8 @@
+FROM node:alpine
+
+COPY pakage.json .
+
+RUN npm install
+
+
+

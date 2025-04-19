@@ -1,0 +1,24 @@
+{
+    "name": "clue-its",
+    "version": "1.1.0",
+    "description": "Clue API Testing",
+    "author": "Walid Darwish",
+    "dependencies": {
+        "@jsdevtools/chai-exec": "^2.0.4",
+        "body-parser": "1.19.0",
+        "chai": "3.5.0",
+        "mocha": "^7.2.0",
+        "mocha-jenkins-reporter": "0.4.2",
+        "supertest": "3.0.0",
+        "tsc": "^1.20150623.0",
+        "uuid": "^3.3.3"
+    },
+    "scripts": {
+        "prestart": "npm install;",
+        "start": "JUNIT_REPORT_PATH=test-result/result.xml JUNIT_REPORT_STACK=3 mocha --recursive --max-old-space-size=4096 --timeout 25000 --colors --reporter mocha-jenkins-reporter ${ARGUMENTS} || true",
+        "test": "mocha --timeout 25000 -R mocha-multi --reporter-options nyan=-,json=.results.json"
+    },
+    "devDependencies": {
+        "typescript": "^3.9.5"
+    }
+}

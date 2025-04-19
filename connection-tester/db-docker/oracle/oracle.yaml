@@ -1,0 +1,13 @@
+version: '2'
+services:
+  database:
+    image: store/oracle/database-enterprise:12.2.0.1
+    mem_limit: 2G
+    environment:
+      DB_MEMORY: 1GB
+    ports:
+      - 1521:1521
+      - 5500:5500
+    volumes:
+      - ./samples:/u01/samples
+       

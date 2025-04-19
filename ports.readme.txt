@@ -1,0 +1,20 @@
+orchestrators: 8240
+mongo: 8250
+authenticators: 8260
+logger: 8280
+globalizer 8300
+mailer: 8320
+smtpserver: 8330
+scheduler: 8350
+metadata-importer: 8360
+metadata-coordinator: 8380
+connection-tracker: 8400
+query-generator: 8410
+query-executor: 8420
+cochroachdb 9600
+cochroachdb console 8899
+dataset-controller: 8440
+
+clue-dfs (seaweed) : 9500
+
+document-retriever: 8460

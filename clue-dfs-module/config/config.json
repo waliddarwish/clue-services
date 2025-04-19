@@ -1,0 +1,6 @@
+{
+    "clueDFS": {
+        "host": "dfs-master-001",
+        "port": 9500
+    }
+}

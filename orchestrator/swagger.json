@@ -1,0 +1,253 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Orchestrator API",
+        "version": "1.0",
+        "title": "Orchestrator"
+    },
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "orch",
+            "description": ""
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/orchestrator/register": {
+            "put": {
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/orchestrator/requestNode/{nodeType}": {
+            "get": {
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/orchestrator/fetch-all-orchestrators": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/orchestrator/test-session1": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/orchestrator/test-session2": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/catalog/tenant": {
+            "put": {
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/catalog/tenant/{tanentId}": {
+            "delete": {
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/catalog/user": {
+            "put": {
+                "parameters": [
+                    {
+                        "name": "UserObject",
+                        "required": true,
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/UserObject"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/catalog/node": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/node/ping": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/access/authenticate": {
+            "post": {
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/access/logout": {
+            "post": {
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/access/reset-password": {
+            "put": {
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/access/change-password": {
+            "put": {
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        }
+    },
+    "definitions": {
+        "UserObject": {
+            "type": "object",
+            "properties": {}
+        }
+    }
+}

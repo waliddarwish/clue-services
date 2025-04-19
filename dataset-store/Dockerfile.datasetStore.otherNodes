@@ -1,0 +1,14 @@
+FROM  clueanalytics/dataset-store-node_1
+
+WORKDIR /opt/dataset-store
+
+ARG HOST
+
+RUN rm /opt/dataset-store/certs/node* 
+RUN cockroach cert create-node 0.0.0.0 ${HOST} --certs-dir=/opt/dataset-store/certs --ca-key=/opt/dataset-store/safe/ca.key
+
+
+
+
+
+

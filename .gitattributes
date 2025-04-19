@@ -1,0 +1,14 @@
+dataset-store/macos/cockroach filter=lfs diff=lfs merge=lfs -text
+dataset-store/linux/cockroach filter=lfs diff=lfs merge=lfs -text
+query-executor/databases/macos/oracle/libociei.dylib filter=lfs diff=lfs merge=lfs -text
+query-executor/databases/linux/oracle/libociei.so filter=lfs diff=lfs merge=lfs -text
+query-executor/macos/cockroach filter=lfs diff=lfs merge=lfs -text
+query-executor/linux/cockroach filter=lfs diff=lfs merge=lfs -text
+dataset-controller/macos/cockroach filter=lfs diff=lfs merge=lfs -text
+dataset-controller/linux/cockroach filter=lfs diff=lfs merge=lfs -text
+metadata-importer/databases/macos/oracle/libociei.dylib filter=lfs diff=lfs merge=lfs -text
+metadata-importer/databases/linux/oracle/libociei.so filter=lfs diff=lfs merge=lfs -text
+connection-tester/databases/macos/oracle/libociei.dylib filter=lfs diff=lfs merge=lfs -text
+connection-tester/databases/linux/oracle/libociei.so filter=lfs diff=lfs merge=lfs -text
+metadata-coordinator/databases/macos/oracle/libociei.dylib filter=lfs diff=lfs merge=lfs -text
+metadata-coordinator/databases/linux/oracle/libociei.so filter=lfs diff=lfs merge=lfs -text

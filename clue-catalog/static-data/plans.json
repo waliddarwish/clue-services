@@ -1,0 +1,37 @@
+[
+    {
+        "id": "c845fa96-b68a-44a7-9756-e99bc4f07031",
+        "planName": "Monthly Plan",
+        "planDescription": "pay as low as $5 per month per user",
+        "planStripeCode": "CLUE-MONTHLY",
+        "planSubTitle": "Go Month by Month",
+        "planPrice": "$5/Month/User",
+        "planMarketingStatement": "Modelling and visualizations for only $5 a month",
+        "status": "NotActive",
+        "concurrency": 5
+    },
+    {
+        "id": "d22a1ffd-a02b-47a5-b492-5951a37c8c0d",
+        "planName": "Yearly Plan",
+        "planDescription": "save when you pay for the whole year",
+        "planStripeCode": "CLUE-YEARLY",
+        "planSubTitle": "Save by paying annually",
+        "planPrice": "$50/Year/User",
+        "planMarketingStatement": "Modelling and visualizations for only $50 a year",
+        "status": "NotActive",
+        "concurrency": 5
+    },
+    {
+        "id": "5fec645d-f978-46da-9977-3f6a64bb37e0",
+        "planName": "Promotion Plan",
+        "planDescription": "Full access to all features",
+        "planStripeCode": "price_1HEX9lDJp06zYt4327qurVmZ",
+        "planSubTitle": "Standard Pricing",
+        "planPrice": "$49/Month/User",
+        "planMarketingStatement": "Your card will not be charged for the first 6 months",
+        "status": "Active",
+        "concurrency": 5,
+        "storageLimit": 200
+    }
+    
+]

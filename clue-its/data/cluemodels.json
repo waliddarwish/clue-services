@@ -1,0 +1,23 @@
+[
+    {
+        "datasources": [
+            
+            { "datasourceId": "78f4da19-6986-49a8-a95b-9c1ad2d4585b" }
+        ],
+        "name": "dvd-rentals-model",
+        "id": "c4a44fc4-5dcd-4945-ba8a-58e1c682a2ab",
+        "userId": "2bc609ab-73e1-44e8-8c14-598592a6ac78",
+        "tenantId": "dfd05429-b67a-4a4a-8e49-e2515a1b8d07",
+        "lastAccess": 1583886382251
+    },
+    {
+        "datasources": [
+           { "datasourceId": "fd4a3f9d-82cb-4463-9f39-f81fcd3aed0e"}
+        ],
+        "name": "Oracle - Model 2020",
+        "id": "ac66ae77-9880-49c5-94ef-27ebd8f588b9",
+        "userId": "2bc609ab-73e1-44e8-8c14-598592a6ac78",
+        "tenantId": "dfd05429-b67a-4a4a-8e49-e2515a1b8d07",
+        "lastAccess": 1584410108772
+    }
+]

@@ -1,0 +1,571 @@
+[
+    {
+        "language": "en",
+        "key": "Success",
+        "message": "Success"
+    },
+    {
+        "language": "en",
+        "key": "8888",
+        "message": "Internal Error. Please try again. If the problem persists, please contact support"
+    },
+    {
+        "language": "en",
+        "key": "1001",
+        "message": "Error in registration - please contact our customer support"
+    },
+    {
+        "language": "en",
+        "key": "2001",
+        "message": "Error in authentication. Please call support"
+    },
+    {
+        "language": "en",
+        "key": "1002",
+        "message": "Unknown Username. Please make sure you have entered a valid username"
+    },
+    {
+        "language": "en",
+        "key": "1004",
+        "message": "Invalid Password"
+    },
+    {
+        "language": "en",
+        "key": "1003",
+        "message": "Error creating tenant"
+    },
+    {
+        "language": "en",
+        "key": "1005",
+        "message": "Error deleting tenant"
+    },
+    {
+        "language": "en",
+        "key": "1006",
+        "message": "Error changing password. Please try again later"
+    },
+    {
+        "language": "en",
+        "key": "1007",
+        "message": "Old password is not valid. Please make sure you have entered the correct password"
+    },
+    {
+        "language": "en",
+        "key": "1008",
+        "message": "Error with new password hashing. Please try again"
+    },
+    {
+        "language": "en",
+        "key": "1009",
+        "message": "Password reset was successful but failed to send email with the new password"
+    },
+    {
+        "language": "en",
+        "key": "1010",
+        "message": "Unknown username"
+    },
+    {
+        "language": "en",
+        "key": "1011",
+        "message": "Error checking user exists"
+    },
+    {
+        "language": "en",
+        "key": "1012",
+        "message": "Error retrieving user"
+    },
+    {
+        "language": "en",
+        "key": "1013",
+        "message": "Error creating a new user"
+    },
+    {
+        "language": "en",
+        "key": "1014",
+        "message": "Error deleting user"
+    },
+    {
+        "language": "en",
+        "key": "1015",
+        "message": "Error updating user profile"
+    },
+    {
+        "language": "en",
+        "key": "1016",
+        "message": "Error updating account profile"
+    },
+    {
+        "language": "en",
+        "key": "1017",
+        "message": "Error updating user status"
+    },
+    {
+        "language": "en",
+        "key": "1018",
+        "message": "Error updating status"
+    },
+    {
+        "language": "en",
+        "key": "1019",
+        "message": "Error updating payment plan"
+    },
+    {
+        "language": "en",
+        "key": "1019",
+        "message": "Error updating payment method"
+    },
+    {
+        "language": "en",
+        "key": "1020",
+        "message": "Error looking up user using a plan"
+    },
+    {
+        "language": "en",
+        "key": "3001",
+        "message": "Error creating datasource connection"
+    },
+    {
+        "language": "en",
+        "key": "3002",
+        "message": "Error looking up datasource connection"
+    },
+    {
+        "language": "en",
+        "key": "3003",
+        "message": "Error deleting datasource connection"
+    },
+    {
+        "language": "en",
+        "key": "3004",
+        "message": "Error updating datasource connection"
+    },
+    {
+        "language": "en",
+        "key": "3005",
+        "message": "Error retrieving datasource connections for user"
+    },
+    {
+        "language": "en",
+        "key": "3006",
+        "message": "Error retrieving datasource connections for tenant"
+    },
+    {
+        "language": "en",
+        "key": "3007",
+        "message": "Error searching datasource connections"
+    },
+    {
+        "language": "en",
+        "key": "3010",
+        "message": "Error testing datasource connection"
+    },
+    {
+        "language": "en",
+        "key": "3011",
+        "message": "Error retrieving recent datasource connections"
+    },
+    {
+        "language": "en",
+        "key": "2001",
+        "message": "Error deleting invitations"
+    },
+    {
+        "language": "en",
+        "key": "2002",
+        "message": "Error sending invitation"
+    },
+    {
+        "language": "en",
+        "key": "2003",
+        "message": "Error accepting invitation"
+    },
+    {
+        "language": "en",
+        "key": "2004",
+        "message": "Error getting tenant invitations"
+    },
+    {
+        "language": "en",
+        "key": "2005",
+        "message": "Error resending invitation"
+    },
+    {
+        "language": "en",
+        "key": "4001",
+        "message": "Error Loading tenants"
+    },
+    {
+        "language": "en",
+        "key": "4002",
+        "message": "Error Loading users for tenant"
+    },
+    {
+        "language": "en",
+        "key": "5001",
+        "message": "Error Scheduling task"
+    },
+    {
+        "language": "en",
+        "key": "5002",
+        "message": "Error getting job information"
+    },
+    {
+        "language": "en",
+        "key": "5003",
+        "message": "Error cancelling job"
+    },
+    {
+        "language": "en",
+        "key": "5004",
+        "message": "Error getting tenant tasks"
+    },
+    {
+        "language": "en",
+        "key": "6001",
+        "message": "Error searching provided scope"
+    },
+    {
+        "language": "en",
+        "key": "6002",
+        "message": "Error counting documents in the provided scope"
+    },
+    {
+        "language": "en",
+        "key": "7001",
+        "message": "Error creating clue model"
+    },
+    {
+        "language": "en",
+        "key": "7002",
+        "message": "Error getting clue model information"
+    },
+    {
+        "language": "en",
+        "key": "7003",
+        "message": "Error deleting clue model"
+    },
+    {
+        "language": "en",
+        "key": "7004",
+        "message": "Error updating clue model"
+    },
+    {
+        "language": "en",
+        "key": "7051",
+        "message": "Error creating clue model object"
+    },
+    {
+        "language": "en",
+        "key": "7052",
+        "message": "Error getting clue model object information"
+    },
+    {
+        "language": "en",
+        "key": "7053",
+        "message": "Error deleting clue model object"
+    },
+    {
+        "language": "en",
+        "key": "7054",
+        "message": "Error updating clue model object"
+    },
+    {
+        "key": "12001",
+        "message": "Unable to read schemas from connection"
+    },
+    {
+        "language": "en",
+        "key": "12002",
+        "message": "Unable to load objects from schema"
+    },
+    {
+        "language": "en",
+        "key": "12003",
+        "message": "Unable to import objects from schema"
+    },
+    {
+        "language": "en",
+        "key": "12004",
+        "message": "Error retrieving status"
+    },
+    {
+        "language": "en",
+        "key": "12005",
+        "message": "Error retrieving status by model"
+    },
+    {
+        "language": "en",
+        "key": "13001",
+        "message": "Error adding subscription plan"
+    },
+    {
+        "language": "en",
+        "key": "13002",
+        "message": "Error updating subscription plan"
+    },
+    {
+        "language": "en",
+        "key": "13003",
+        "message": "Error retrieving subscription plans"
+    },
+    {
+        "language": "en",
+        "key": "13004",
+        "message": "Error deleting subscription plan"
+    },
+    {
+        "language": "en",
+        "key": "13005",
+        "message": "Error retrieving subscription plan"
+    },
+    {
+        "language": "en",
+        "key": "13006",
+        "message": "Error retrieving active subscription plans"
+    },
+    {
+        "language": "en",
+        "key": "13007",
+        "message": "Error validating plan stripcode"
+    },
+    {
+        "language": "en",
+        "key": "13008",
+        "message": "Error stripcode exists"
+    },
+    {
+        "language": "en",
+        "key": "14001",
+        "message": "Error creating dataset"
+    },
+    {
+        "language": "en",
+        "key": "14002",
+        "message": "Error looking up dataset"
+    },
+    {
+        "language": "en",
+        "key": "14003",
+        "message": "Error deleting dataset"
+    },
+    {
+        "language": "en",
+        "key": "14004",
+        "message": "Error updating dataset"
+    },
+    {
+        "language": "en",
+        "key": "14005",
+        "message": "Error retrieving dataset for user"
+    },
+    {
+        "language": "en",
+        "key": "14006",
+        "message": "Error retrieving dataset for tenant"
+    },
+    {
+        "language": "en",
+        "key": "14007",
+        "message": "Error searching datasets"
+    },
+    {
+        "language": "en",
+        "key": "14010",
+        "message": "Error testing dataset"
+    },
+    {
+        "language": "en",
+        "key": "14011",
+        "message": "Error retrieving recent dataset"
+    },
+    {
+        "language": "en",
+        "key": "14012",
+        "message": "Error assinging new file identifier"
+    },
+    {
+        "language": "en",
+        "key": "14013",
+        "message": "Error finding datafile"
+    },
+    {
+        "language": "en",
+        "key": "14014",
+        "message": "Error finding dataset datafiles"
+    },
+    {
+        "language": "en",
+        "key": "14015",
+        "message": "Error deleting datafile"
+    },
+    {
+        "language": "en",
+        "key": "14016",
+        "message": "Error deleting dataset datafiles"
+    }, {
+        "language": "en",
+        "key": "14017",
+        "message": "Error importing datafile"
+    },
+    {
+        "language": "en",
+        "key": "15001",
+        "message": "Error generating graph for model objects"
+    },
+    {
+        "language": "en",
+        "key": "15002",
+        "message": "Error generating graph for model"
+    },
+    {
+        "language": "en",
+        "key": "15003",
+        "message": "Error from query generator"
+    },
+    {
+        "language": "en",
+        "key": "15004",
+        "message": "Error from query executor"
+    },
+    {
+        "language": "en",
+        "key": "15005",
+        "message": "Error handling query"
+    },
+    {
+        "language": "en",
+        "key": "15006",
+        "message": "Error generating model graph"
+    },
+    {
+        "language": "en",
+        "key": "15007",
+        "message": "Error generating model object graph"
+    },
+    {
+        "language": "en",
+        "key": "16001",
+        "message": "Error creating dataset"
+    },
+    {
+        "language": "en",
+        "key": "20002",
+        "message": "Unable to load datasource connections"
+    },
+    {
+        "language": "en",
+        "key": "16002",
+        "message": "Error creating dataset"
+    },
+    {
+        "language": "en",
+        "key": "21001",
+        "message": "Error creating visualization book"
+    },
+    {
+        "language": "en",
+        "key": "21002",
+        "message": "Error retrieving visualization book"
+    },
+    {
+        "language": "en",
+        "key": "21003",
+        "message": "Error retrieving visualization pages from visualization book"
+    },
+    {
+        "language": "en",
+        "key": "21004",
+        "message": "Error retrieving visualization page from visualization book"
+    },
+    {
+        "language": "en",
+        "key": "21005",
+        "message": "Error retrieving visualization books for user"
+    },
+    {
+        "language": "en",
+        "key": "21006",
+        "message": "Error retrieving visualization books for tenant"
+    },
+    {
+        "language": "en",
+        "key": "21007",
+        "message": "Error deleting visualization book"
+    },
+    {
+        "language": "en",
+        "key": "21008",
+        "message": "Error updating visualization book"
+    },
+    {
+        "language": "en",
+        "key": "21009",
+        "message": "Error retrieving recent visualization book"
+    },
+    {
+        "language": "en",
+        "key": "22001",
+        "message": "Error creating visualization page"
+    },
+    {
+        "language": "en",
+        "key": "22002",
+        "message": "Error retrieving  visualization page"
+    },
+    {
+        "language": "en",
+        "key": "22003",
+        "message": "Error retrieving  visualization books for user"
+    },
+    {
+        "language": "en",
+        "key": "22004",
+        "message": "Error retrieving  visualization books for tenant"
+    },
+    {
+        "language": "en",
+        "key": "22005",
+        "message": "Error deleting visualization page "
+    },
+    {
+        "language": "en",
+        "key": "22006",
+        "message": "Error updating visualization page"
+    },
+    {
+        "language": "en",
+        "key": "30001",
+        "message": "Error creating a document"
+    },
+    {
+        "language": "en",
+        "key": "30002",
+        "message": "Error updating document"
+    },
+    {
+        "language": "en",
+        "key": "30003",
+        "message": "Error retrieving document"
+    },
+    {
+        "language": "en",
+        "key": "30004",
+        "message": "Error deleting document"
+    },
+    {
+        "language": "en",
+        "key": "30005",
+        "message": "Error searching documents by category"
+    },
+    {
+        "language": "en",
+        "key": "30006",
+        "message": "Error searching documents by keyword"
+    },
+    {
+        "language": "en",
+        "key": "30007",
+        "message": "Error searching documents"
+    }
+    
+]

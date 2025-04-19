@@ -1,0 +1,71 @@
+PUT /catalog/tenant
+
+
+{
+    "tenant": {
+        "name": "The Company With Lots of Data",
+        "address": {
+            "unitNumber": 4,
+            "street1": "57 Len Lunney Cres",
+            "street2": "",
+            "city": "Ottawa",
+            "state": "On",
+            "country": "Canada",
+            "zipCode": "K2G6X4"
+        },
+        "paymentToken": "PaymentTokenFromStripe",
+        "phoneNumber": "819 329 8179"
+    },
+    "user": {
+				"username": "darwish.walid@gmail.com",
+        "password": "EncryptedPassword",
+        "name": {
+            "firstName": "Walid",
+            "lastName": "Darwish"
+        },
+        "userLanguage": "en-us", 
+        "userTimeZone": "GMT-5"
+    }
+}
+
+{
+    "status": 0,
+    "message": "Success",
+    "data": {
+      "tenant": {
+        "status": "Active",
+        "_id": "5db4593cac64f25c7bd6d674",
+        "name": "The Company With Lots of Data 2",
+        "address": {
+          "unitNumber": 4,
+          "street1": "57 Len Lunney Cres",
+          "street2": "",
+          "city": "Ottawa",
+          "state": "On",
+          "country": "Canada",
+          "zipCode": "K2G6X4"
+        },
+        "paymentToken": "PaymentTokenFromStripe",
+        "phoneNumber": "819 329 8179",
+        "id": "51858122-fc84-47f9-8168-0ee55c317cc6",
+        "__v": 0
+      },
+      "user": {
+        "status": "Active",
+        "userLanguage": "en-us",
+        "_id": "5db4593cac64f25c7bd6d675",
+        "username": "d2@clueanalytics.com",
+        "password": null,
+        "name": {
+          "firstName": "Walid",
+          "lastName": "Darwish"
+        },
+        "userTimeZone": "GMT-5",
+        "id": "269893a5-3074-4792-9d1f-66f5557fcaa2",
+        "tenantId": "51858122-fc84-47f9-8168-0ee55c317cc6",
+        "role": "TenantAdmin",
+        "__v": 0
+      }
+    }
+  }
+---------------------------------------------------

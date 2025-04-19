@@ -1,0 +1,594 @@
+version: '3.3'
+
+services: 
+
+  # CLue-Catalog Network and works ( 2 shards - 3 relplcias each)
+
+    ######## Clue-Catalog - Shard0 replicas ########
+
+  shard0-replica0:
+    image: clueanalytics/clue-catalog-shard0-replica0
+    build:
+      context: clue-catalog/mongod
+    command: mongod -f /etc/mongod.conf --shardsvr --replSet shard0
+    restart: on-failure
+    volumes:
+      - ./clue-catalog/mongod/mongod.conf:/etc/mongod.conf
+      - ./clue-catalog/data/shard0-replica0:/data/db
+    networks:
+      internalmongonetwork:
+        aliases:
+          - shard0-replica0
+    environment:
+      - REPSET_NAME=shard0
+    expose:
+      - "27017"
+    logging: 
+      driver: "none"
+      options:
+        max-size: "200k"
+        max-file: "10"
+        
+  configdb-replica0:
+    image: clueanalytics/clue-catalog-configdb-replica0
+    build:
+      context: clue-catalog/mongod
+    command: mongod -f /etc/mongod.conf --configsvr --replSet configdb
+    restart: on-failure
+    volumes:
+      - ./clue-catalog/mongod/mongod.conf:/etc/mongod.conf
+      - ./clue-catalog/data/configdb-replica0:/data/db
+    networks:
+      internalmongonetwork:
+        aliases:
+          - configdb-replica0
+    environment:
+      - REPSET_NAME=configdb
+    expose:
+      - "27017"
+    logging: 
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
+
+
+  ######## MONGODB Request Routers ########
+
+  mongos-router0:
+    image: clueanalytics/clue-catalog-mongos-router0
+    build:
+      context: clue-catalog/mongos
+    command: mongos --port 27017  --bind_ip 0.0.0.0 --configdb "configdb/configdb-replica0:27017"
+    restart: on-failure
+    volumes:
+      - ./clue-catalog/setup.js:/etc/clue-catalog/setup.js
+      - ./clue-catalog/clean.js:/etc/clue-catalog/clean.js
+      - ./clue-catalog/static-data:/etc/clue-catalog/static-data
+
+    depends_on:
+      - shard0-replica0
+      - configdb-replica0
+    networks:
+      internalmongonetwork:
+        aliases:
+          - mongos-router0
+    environment:
+      - SHARD_LIST=shard0/shard0-replica0:27017
+    expose:
+      - "27017"
+    ports:
+      - "8250:27017"
+    logging: 
+      driver: "none"
+
+    
+  dataset-store-node_1:
+    container_name: dataset-store-node-1
+    hostname: dataset-store-node-1
+    image: clueanalytics/dataset-store-node_1
+    build: 
+      context: dataset-store
+      dockerfile: Dockerfile.datasetStore.firstNode
+    volumes:
+      - ./dataset-store/data/node_1:/opt/dataset-store/data
+    command: start --certs-dir=/opt/dataset-store/certs  --port 9600  --http-port 3500 --store=/opt/dataset-store/data --log-dir=/opt/dataset-store/logs --log-file-verbosity=info --join=dataset-store-node-2:9600,dataset-store-node-1:9600
+    restart: on-failure
+    expose:
+      - "9600"
+      - "3500"
+    ports:
+      - "9600:9600"
+      - "3500:3500"
+    networks:
+      internalmongonetwork:
+      dfsnetwork:
+      dataset-store_net:
+        aliases:
+          - node_1
+   
+  dataset-store-node_2:
+    container_name: dataset-store-node-2
+    hostname: dataset-store-node-2
+    image: clueanalytics/dataset-store-node_2
+    build: 
+      context: dataset-store
+      dockerfile: Dockerfile.datasetStore.otherNodes
+      args: 
+        HOST: dataset-store-node-2
+    volumes:
+      - ./dataset-store/data/node_2:/opt/dataset-store/data
+    command: start --certs-dir=/opt/dataset-store/certs  --port 9600  --http-port 3500 --store=/opt/dataset-store/data --log-dir=/opt/dataset-store/logs --log-file-verbosity=info --join=dataset-store-node-2:9600,dataset-store-node-1:9600
+    restart: on-failure
+    depends_on:
+      - dataset-store-node_1
+    expose:
+      - "9600"
+      - "3500"
+    ports:
+      - "9601:9600"
+      - "3501:3500"
+    networks:
+      internalmongonetwork:
+      dfsnetwork:
+      dataset-store_net:
+        aliases:
+          - node_2
+   
+      
+  
+
+  dfs-master-001:
+    image: chrislusf/seaweedfs:1.83 
+    expose:
+      - "9500"
+    ports:
+      - "9500:9500"
+    command: "master -ip=dfs-master-001 -port 9500"
+    restart: on-failure
+    networks: 
+      dfsnetwork:
+      microservices:
+
+
+  dfs-volume-001-001:
+    hostname: dfs-volume-001-001
+    image: chrislusf/seaweedfs:1.83
+    command: "volume -mserver=dfs-master-001:9500 -port=10100 -publicUrl=localhost:10100"
+    restart: on-failure
+    depends_on:
+      - dfs-master-001
+    networks: 
+      dfsnetwork:
+      microservices:
+
+    logging: 
+      driver: none
+
+  dfs-volume-001-002:
+    hostname: dfs-volume-001-002
+    image: chrislusf/seaweedfs:1.83
+    command: "volume -mserver=dfs-master-001:9500 -port=10101 -publicUrl=localhost:10101"
+    restart: on-failure
+    depends_on:
+      - dfs-master-001
+    networks: 
+      dfsnetwork:
+      microservices:
+
+    logging: 
+      driver: none
+  
+  redis-master-node:
+    image: "redis:6.0.5"
+    command: redis-server /usr/local/etc/redis/redis.config --requirepass 4lzahraa2
+    restart: on-failure
+
+    ports:
+      - "9700:9700"
+
+    volumes:
+      - ./clue-session-store/redis/redis-config:/usr/local/etc/redis
+
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+    networks:
+      microservices:
+      redis_net:
+
+
+  ###### Services
+  orchestrator:
+    build: 
+      context: ./orchestrator
+      dockerfile: Dockerfile.orchestrator.dev
+    image: clueanalytics/orchestrator
+    restart: on-failure
+
+    ports:
+      - "9240:9229"
+    command: npm run start:dev
+
+    volumes:
+      - ./orchestrator/src:/home/src/orchestrator/src
+      - ./orchestrator/config:/home/src/orchestrator/config
+      - ./catalog-module/src:/home/src/catalog-module/src
+      - ./log-module/src:/home/src/log-module/src
+      - ./authentication-module/src:/home/src/authentication-module/src
+      - ./globalization-module/src:/home/src/globalization-module/src
+      - ./mail-module/src:/home/src/mail-module/src
+      - ./connection-test-module/src:/home/src/connection-test-module/src
+      - ./scheduler-module/src:/home/src/scheduler-module/src
+      - ./metadata-coordination-module/src:/home/src/metadata-coordination-module/src
+      - ./database-module/src:/home/src/database-module/src
+      - ./query-generator-module/src:/home/src/query-generator-module/src
+      - ./query-executor-module/src:/home/src/query-executor-module/src
+      - ./clue-dfs-module/src:/home/src/clue-dfs-module/src
+      - ./datasets-controller-module/src:/home/src/datasets-controller-module/src
+      - ./object-schema/src:/home/src/object-schema/src
+      - ./app-module/src:/home/src/app-module/src
+      - ./document-retrieving-module/src:/home/src/document-retrieving-module/src
+    
+    networks:
+      microservices:
+      internalmongonetwork:
+      dfsnetwork:
+      redis_net:
+
+    depends_on:
+      - mongos-router0
+
+
+  authenticator:
+    image: clueanalytics/authenticator
+    restart: on-failure
+    build: 
+      context: ./authenticator
+      dockerfile: Dockerfile.authenticator.dev
+    ports: 
+      #- "8260:8260"
+      - "9260:9229"
+    command: npm run start:dev
+    volumes: 
+      - ./authenticator/src:/home/src/authenticator/src
+      - ./object-schema/src:/home/src/object-schema/src
+      - ./log-module/src:/home/src/log-module/src
+      - ./globalization-module/src:/home/src/globalization-module/src
+      - ./app-module/src:/home/src/app-module/src
+    networks: 
+      microservices:
+
+  logger:
+    image: clueanalytics/logger
+    restart: on-failure
+    build: 
+      context: ./logger
+      dockerfile: Dockerfile.logger.dev
+    ports: 
+      #- "8280:8280"
+      - "9280:9229"
+    command: npm run start:dev
+    volumes: 
+      - ./logger/src:/home/src/logger/src
+      - ./app-module/src:/home/src/app-module/src
+      - ./log-module/src:/home/src/log-module/src
+    
+    networks: 
+      microservices:
+      internalmongonetwork:
+
+  globalizer:
+    image: clueanalytics/globalizer
+    restart: on-failure
+    build: 
+      context: ./globalizer
+      dockerfile: Dockerfile.globalizer.dev
+    ports: 
+      #- "8300:8300"
+      - "9300:9229"
+    command: npm run start:dev
+    volumes: 
+      - ./globalizer/src:/home/src/globalizer/src
+      - ./app-module/src:/home/src/app-module/src
+      - ./log-module/src:/home/src/log-module/src
+      - ./globalization-module/src:/home/src/globalization-module/src
+    networks: 
+      microservices:
+      internalmongonetwork:
+
+  mailer:
+    image: clueanalytics/mailer
+    restart: on-failure
+    build: 
+      context: ./mailer
+      dockerfile: Dockerfile.mailer.dev
+    ports: 
+     # - "8320:8320"
+      - "9320:9229"
+    command: npm run start:dev
+    volumes: 
+      - ./mailer/src:/home/src/mailer/src
+      - ./app-module/src:/home/src/app-module/src
+      - ./log-module/src:/home/src/log-module/src
+    
+    networks: 
+      microservices:
+    logging: 
+      driver: none
+
+  metadata-importer:
+    image: clueanalytics/metadata-importer
+    restart: on-failure
+    build: 
+      context: ./metadata-importer
+      dockerfile: Dockerfile.metadata-importer.dev
+    ports: 
+      #- "8360:8360"
+      - "9360:9229"
+    command: npm run start:dev
+    volumes: 
+      - ./metadata-importer/src:/home/src/metadata-importer/src
+      - ./app-module/src:/home/src/app-module/src
+      - ./authentication-module/src:/home/src/authentication-module/src
+      - ./log-module/src:/home/src/log-module/src
+      - ./database-module/src:/home/src/database-module/src
+      - ./object-schema/src:/home/src/object-schema/src
+
+    networks: 
+      microservices: 
+      internalmongonetwork:
+
+  metadata-coordinator:
+    image: clueanalytics/metadata-coordinator
+    restart: on-failure
+    build: 
+      context: ./metadata-coordinator
+      dockerfile: Dockerfile.metadata-coordinator.dev
+    ports: 
+      #- "8380:8380"
+      - "9380:9229"
+    command: npm run start:dev
+    volumes: 
+      - ./metadata-coordinator/src:/home/src/metadata-coordinator/src
+      - ./app-module/src:/home/src/app-module/src
+      - ./authentication-module/src:/home/src/authentication-module/src
+      - ./log-module/src:/home/src/log-module/src
+      - ./database-module/src:/home/src/database-module/src
+      - ./metadata-importing-module/src:/home/src/metadata-importing-module/src
+      - ./connection-tracking-module/src:/home/src/connection-tracking-module/src
+      - ./object-schema/src:/home/src/object-schema/src
+
+    networks: 
+      microservices:
+      internalmongonetwork:
+
+  connection-tester:
+    image: clueanalytics/connection-tester
+    restart: on-failure
+    build: 
+      context: ./connection-tester
+      dockerfile: Dockerfile.connection-tester.dev
+    ports: 
+      #- "8340:8340"
+      - "9340:9229"
+    command: npm run start:dev
+    volumes: 
+      - ./connection-tester/src:/home/src/connection-tester/src
+      - ./app-module/src:/home/src/app-module/src
+      - ./authentication-module/src:/home/src/authentication-module/src
+      - ./log-module/src:/home/src/log-module/src
+      - ./object-schema/src:/home/src/object-schema/src
+
+    networks: 
+      microservices:
+      internalmongonetwork:
+
+
+  query-generator:
+    image: clueanalytics/query-generator
+    restart: on-failure
+    build: 
+      context: ./query-generator
+      dockerfile: Dockerfile.query-generator.dev
+    ports: 
+      #- "8410:8410"
+      - "9410:9229"
+    command: npm run start:dev
+    volumes: 
+      - ./query-generator/src:/home/src/query-generator/src
+      - ./app-module/src:/home/src/app-module/src
+      - ./log-module/src:/home/src/log-module/src
+      - ./database-module/src:/home/src/database-module/src
+      - ./object-schema/src:/home/src/object-schema/src
+    networks: 
+      microservices:
+      internalmongonetwork:
+
+  
+  query-executor:
+    image: clueanalytics/query-executor
+    restart: on-failure
+    build: 
+      context: ./query-executor
+      dockerfile: Dockerfile.query-executor.dev
+    ports: 
+      #- "8420:8420"
+      - "9420:9229"
+    command: npm run start:dev
+    volumes: 
+      - ./query-executor/src:/home/src/query-executor/src
+      - ./app-module/src:/home/src/app-module/src
+      - ./log-module/src:/home/src/log-module/src
+      - ./database-module/src:/home/src/database-module/src
+      - ./authentication-module/src:/home/src/authentication-module/src
+      - ./connection-tracking-module/src:/home/src/connection-tracking-module/src
+      - ./object-schema/src:/home/src/object-schema/src
+
+    networks: 
+      microservices:
+      internalmongonetwork:
+      dataset-store_net:
+  
+  scheduler:
+    image: clueanalytics/scheduler
+    restart: on-failure
+    build: 
+      context: ./scheduler
+      dockerfile: Dockerfile.scheduler.dev
+    ports: 
+      #- "8350:8350"
+      - "9350:9229"
+    command: npm run start:dev
+    volumes: 
+      - ./scheduler/src:/home/src/scheduler/src
+      - ./app-module/src:/home/src/app-module/src
+      - ./log-module/src:/home/src/log-module/src
+      - ./database-module/src:/home/src/database-module/src
+      - ./authentication-module/src:/home/src/authentication-module/src
+      - ./connection-tracking-module/src:/home/src/connection-tracking-module/src
+      - ./object-schema/src:/home/src/object-schema/src
+      - ./globalization-module/src:/home/src/globalization-module/src
+
+
+    networks: 
+      microservices:
+      internalmongonetwork:
+
+  dataset-controller:
+    image: clueanalytics/dataset-controller
+    restart: on-failure
+    build: 
+      context: ./dataset-controller
+      dockerfile: Dockerfile.dataset-controller.dev
+    ports: 
+      #- "8440:8440"
+      - "9440:9229"
+    command: npm run start:dev
+    volumes: 
+      - ./dataset-controller/src:/home/src/dataset-controller/src
+      - ./dataset-controller/config:/home/src/dataset-controller/config
+      - ./app-module/src:/home/src/app-module/src
+      - ./log-module/src:/home/src/log-module/src
+      - ./object-schema/src:/home/src/object-schema/src
+      - ./database-module/src:/home/src/database-module/src
+      - ./clue-dfs-module/src:/home/src/clue-dfs-module/src
+    networks: 
+      microservices:
+      internalmongonetwork:
+      dfsnetwork:
+      dataset-store_net:
+
+  document-retriever:
+    image: clueanalytics/document-retriever
+    restart: on-failure
+    build: 
+      context: ./document-retriever
+      dockerfile: Dockerfile.document-retriever.dev
+    ports: 
+      #- "8460:8460"
+      - "9460:9229"
+    command: npm run start:dev
+    volumes: 
+      - ./document-retriever/src:/home/src/document-retriever/src
+      - ./app-module/src:/home/src/app-module/src
+      - ./log-module/src:/home/src/log-module/src
+      - ./document-retrieving-module/src:/home/src/document-retrieving-module/src
+    networks: 
+      microservices:
+      internalmongonetwork:
+      
+  nginx: 
+    restart: always
+    image: clueanalytics/nginx
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile
+    depends_on: 
+      - orchestrator
+      - dfs-volume-001-001
+      - dfs-volume-001-002
+    networks:
+      microservices:
+      dfsnetwork:
+    volumes:
+      - ./nginx/conf:/etc/nginx/conf.d
+    ports:
+      - "10100:10100"
+      - "10101:10101"
+      - "8240:8240"
+    logging: 
+      driver: none
+      
+
+###### End of Services
+
+##### start dev image 
+
+#  dev:
+#    image: clueanalytics/dev-image
+#    build: 
+#      context: .
+#      dockerfile: Dockerfile.dev-image
+#    entrypoint: bash
+#    command: -c "ping localhost -i 300"
+#    restart: on-failure
+#    volumes: 
+#      - /home/src/app-module/node_modules
+#      - /home/src/authentication-module/node_modules
+#      - /home/src/catalog-module/node_modules
+#      - /home/src/clue-dfs-module/node_modules
+#      - /home/src/connection-test-module/node_modules
+#      - /home/src/connection-tracking-module/node_modules
+#      - /home/src/database-module/node_modules
+#      - /home/src/datasets-controller-module/node_modules
+#      - /home/src/globalization-module/node_modules 
+#      - /home/src/graph-data-structure/node_modules
+#      - /home/src/log-module/node_modules
+#      - /home/src/mail-module/node_modules
+#      - /home/src/metadata-coordination-module/node_modules
+#      - /home/src/metadata-importing-module/node_modules
+#      - /home/src/object-schema/node_modules
+#      - /home/src/query-executor-module/node_modules
+#      - /home/src/query-generator-module/node_modules
+#      - /home/src/scheduler-module/node_modules
+#      - /home/src/dataset-controller/node_modules
+#      - /home/src/scheduler/node_modules
+#      - /home/src/query-executor/node_modules
+#      - /home/src/query-generator/node_modules
+#      - /home/src/connection-tester/node_modules
+#      - /home/src/metadata-coordinator/node_modules
+#      - /home/src/metadata-importer/node_modules
+#      - /home/src/mailer/node_modules
+#      - /home/src/globalizer/node_modules
+#      - /home/src/logger/node_modules
+#      - /home/src/authenticator/node_modules
+#      - /home/src/orchestrator/node_modules
+#      - /home/src/clue-its/node_modules
+#      - .:/home/src
+#    depends_on: 
+#      - dataset-controller
+#      - scheduler
+#      - query-executor
+#      - query-generator
+#      - connection-tester
+#      - metadata-coordinator
+#      - orchestrator
+#      - authenticator
+#      - globalizer
+#      - logger
+#      - mailer
+#      - metadata-importer
+
+
+networks:
+  dataset-store_net: 
+    driver: bridge
+  internalmongonetwork: {}
+  microservices: {}
+  dfsnetwork: {}
+  redis_net: {}
+   
+  
+
+

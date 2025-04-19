@@ -1,0 +1,21 @@
+FROM clueanalytics/dependencies
+
+COPY --from=clueanalytics/orchestrator /home/src/orchestrator /home/src/orchestrator
+COPY --from=clueanalytics/query-executor /home/src/query-executor /home/src/query-executor
+COPY --from=clueanalytics/query-generator /home/src/query-generator /home/src/query-generator
+COPY --from=clueanalytics/metadata-coordinator /home/src/metadata-coordinator /home/src/metadata-coordinator 
+COPY --from=clueanalytics/metadata-importer /home/src/metadata-importer /home/src/metadata-importer
+COPY --from=clueanalytics/globalizer /home/src/globalizer /home/src/globalizer
+COPY --from=clueanalytics/logger /home/src/logger /home/src/logger
+COPY --from=clueanalytics/dataset-controller /home/src/dataset-controller /home/src/dataset-controller
+COPY --from=clueanalytics/scheduler /home/src/scheduler /home/src/scheduler
+COPY --from=clueanalytics/connection-tester /home/src/connection-tester /home/src/connection-tester
+COPY --from=clueanalytics/mailer /home/src/mailer /home/src/mailer
+COPY --from=clueanalytics/authenticator /home/src/authenticator /home/src/authenticator
+
+
+WORKDIR /home/src/
+
+ENTRYPOINT [ "bash" ]
+
+CMD [ "ping locahost -i 300" ]

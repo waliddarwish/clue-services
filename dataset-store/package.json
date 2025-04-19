@@ -1,0 +1,19 @@
+{
+  "name": "dataset-store",
+  "version": "1.1.0",
+  "description": "",
+  "main": "upload-certs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "mongodb": "^3.5.5",
+    "tsc": "^1.20150623.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  }
+}

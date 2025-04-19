@@ -1,0 +1,7 @@
+{
+    "privateInterface" : "localhost",
+    "port": 8260,
+    "rsaPassphrase" : "smart",
+    "dbKey" : "clue",
+    "pepper" : "VeryComplexPassword"
+}

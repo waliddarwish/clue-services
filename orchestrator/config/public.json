@@ -1,0 +1,18 @@
+{
+    "public": [
+        "CatalogController.createTenant",
+        "SecurityController.authenticate",
+        "SecurityController.resetPassword",
+        "CatalogController.deleteTenant",
+        "CatalogController.userExists",
+        "SubscriptionPlanController.getAllSubscriptionPlans",
+        "SubscriptionPlanController.getAllActiveSubscriptionPlans",
+        "OrchController.getSupportedLanguages",
+        "InvitationController.getInvitationInfo",
+        "InvitationController.acceptInvitation",
+        "DocumentController.getDocument",
+        "DocumentController.getDocumentsByCategory",
+        "DocumentController.getDocumentsByKeyword",
+        "DocumentController.searchDocuments"
+    ]
+}

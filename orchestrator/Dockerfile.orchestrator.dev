@@ -1,0 +1,28 @@
+FROM clueanalytics/dependencies
+
+RUN apt-get update -y
+RUN apt-get upgrade -y 
+RUN apt-get install -y build-essential 
+RUN npm install -g node-gyp
+RUN apt-get install -y python 
+RUN apt-get install -y make
+#RUN apt-get update && apt-get install python make g++
+
+WORKDIR /home/src/orchestrator
+
+COPY package.json ./
+COPY tsconfig*.json ./
+COPY nodemon.json ./
+
+ENV PATH /home/src/orchestrator/node_modules/.bin:$PATH
+
+RUN npm install
+
+COPY . ./
+
+RUN rm -fr /home/src/connection-tracking-module/ \
+    /home/src/graph-data-structure/ \
+    /home/src/metadata-importing-module/
+
+EXPOSE 8240
+CMD ["npm","start"]

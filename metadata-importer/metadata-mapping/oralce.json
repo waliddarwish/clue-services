@@ -1,0 +1,152 @@
+{
+    "VARCHAR2": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "NVARCHAR2": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "VARCHAR": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "NUMBER": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "BINARY_FLOAT": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "CHAR": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "NCHAR": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "CLOB": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "NCLOB": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "LONG": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "DATE": {
+        "usageType": "Date",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "TIMESTAMP": {
+        "usageType": "Timestamp",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "BLOB": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "BFILE": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "RAW": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "LONG RAW": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "ROWID": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "URI": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "SDO_GEOMETRY": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "SDO_GTYPE": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "SDO_SRID": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "SDO_POINT": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "SDO_ORDINATES": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "SDO_ELEM_INFO": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "SDO_STARTING_OFFSET": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "SDO_ETYPE": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "SDO_INTERPRETATION": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "TIMESTAMP(6) WITH LOCAL TIME ZONE" : {
+        "usageType": "Date",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "INTERVAL YEAR(2) TO MONTH" : {
+        "usageType": "Date",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "XMLTYPE": {
+        "usageType": "Date",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    }
+}

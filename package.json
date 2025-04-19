@@ -1,0 +1,39 @@
+{
+  "name": "ClueAnalytics",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "testjmeter": "./query-tests/run-query-test.sh",
+    "build": "rimraf dist && tsc -p tsconfig.build.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/wdarwish/simpleanalytics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/wdarwish/simpleanalytics/issues"
+  },
+  "homepage": "https://gitlab.com/wdarwish/simpleanalytics#readme",
+  "dependencies": {
+    "json-diff": "^0.5.4",
+    "tsc": "^1.20150623.0",
+    "rimraf": "3.0.0"
+  },
+  "devDependencies": {
+    "lerna": "^3.20.2",
+    "lint-staged": "10.2.11",
+    "husky": "4.2.5",
+    "typescript": "^3.9.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lerna run --concurrency 1 --stream precommit"
+    }
+  }
+}

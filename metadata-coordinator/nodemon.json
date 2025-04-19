@@ -1,0 +1,15 @@
+{
+    "watch": [
+      "src",
+      "../app-module/src",
+      "../authentication-module/src",
+      "../database-module/src",
+      "../metadata-importing-module/src",
+      "../connection-tracking-module/src"
+    ],
+    "ext": "ts",
+    "ignore": [
+      "src/**/*.spec.ts"
+    ],
+    "exec": "node --inspect=0.0.0.0 --require ts-node/register --require tsconfig-paths/register src/main.ts"
+  }

@@ -1,0 +1,13 @@
+[
+    {
+        "username": "admin@clueanalytics.com",
+        "password": "f550d921005bb55c7f59070ea495131673fdc810dd41590d1b9afa4e3e0ef32e",
+        "id": "2bc609ab-73e1-44e8-8c14-598592a6ac78",
+        "role": "Admin",
+        "tenantId": "dfd05429-b67a-4a4a-8e49-e2515a1b8d07",
+        "name": {"firstName": "Walid", "lastName": "Darwish"},
+        "status": "Active",
+        "userLanguage": "en",
+        "userTimeZone": "EST"
+    }
+]

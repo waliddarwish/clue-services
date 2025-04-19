@@ -1,0 +1,47 @@
+2020-05-04 21:04:50,069 INFO o.a.j.u.JMeterUtils: Setting Locale to en_CA
+2020-05-04 21:04:50,100 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2020-05-04 21:04:50,101 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2020-05-04 21:04:50,103 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
+2020-05-04 21:04:50,103 INFO o.a.j.JMeter: Version 5.2.1
+2020-05-04 21:04:50,103 INFO o.a.j.JMeter: java.version=14.0.1
+2020-05-04 21:04:50,103 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2020-05-04 21:04:50,103 INFO o.a.j.JMeter: os.name=Mac OS X
+2020-05-04 21:04:50,103 INFO o.a.j.JMeter: os.arch=x86_64
+2020-05-04 21:04:50,103 INFO o.a.j.JMeter: os.version=10.15.4
+2020-05-04 21:04:50,103 INFO o.a.j.JMeter: file.encoding=UTF-8
+2020-05-04 21:04:50,103 INFO o.a.j.JMeter: java.awt.headless=null
+2020-05-04 21:04:50,103 INFO o.a.j.JMeter: Max memory     =4294967296
+2020-05-04 21:04:50,104 INFO o.a.j.JMeter: Available Processors =8
+2020-05-04 21:04:50,112 INFO o.a.j.JMeter: Default Locale=English (Canada)
+2020-05-04 21:04:50,112 INFO o.a.j.JMeter: JMeter  Locale=English (Canada)
+2020-05-04 21:04:50,112 INFO o.a.j.JMeter: JMeterHome=/Users/mmaamoun/simple/simpleanalytics/query-tests/apache-jmeter-5.2.1
+2020-05-04 21:04:50,112 INFO o.a.j.JMeter: user.dir  =/Users/mmaamoun/simple/simpleanalytics/query-tests/apache-jmeter-5.2.1/bin
+2020-05-04 21:04:50,112 INFO o.a.j.JMeter: PWD       =/Users/mmaamoun/simple/simpleanalytics/query-tests/apache-jmeter-5.2.1/bin
+2020-05-04 21:04:50,114 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: Mohameds-MacBook-Pro-2.local FullName: localhost
+2020-05-04 21:04:51,522 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2020-05-04 21:04:51,528 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
+2020-05-04 21:04:51,528 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
+2020-05-04 21:04:51,628 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2020-05-04 21:04:53,112 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-05-04 21:04:53,113 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-05-04 21:04:53,113 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-05-04 21:04:53,113 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-05-04 21:04:53,113 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2020-05-04 21:04:53,113 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2020-05-04 21:04:53,406 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2020-05-04 21:04:53,407 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /Users/mmaamoun/simple/simpleanalytics/query-tests/apache-jmeter-5.2.1/bin/proxyserver.jks
+2020-05-04 21:04:53,516 INFO o.a.j.s.FileServer: Default base='/Users/mmaamoun/simple/simpleanalytics/query-tests/apache-jmeter-5.2.1/bin'
+2020-05-04 21:04:53,785 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2020-05-04 21:04:53,786 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2020-05-04 21:04:53,786 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2020-05-04 21:04:53,786 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2020-05-04 21:04:53,801 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2020-05-04 21:05:01,340 INFO o.a.j.g.a.Load: Loading file: /Users/mmaamoun/simple/simpleanalytics/query-tests/QueryTestPlan.jmx
+2020-05-04 21:05:01,340 INFO o.a.j.s.FileServer: Set new base='/Users/mmaamoun/simple/simpleanalytics/query-tests'
+2020-05-04 21:05:01,462 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2020-05-04 21:05:01,483 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2020-05-04 21:05:01,484 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2020-05-04 21:05:01,486 INFO o.a.j.s.SaveService: Loading file: /Users/mmaamoun/simple/simpleanalytics/query-tests/QueryTestPlan.jmx
+2020-05-04 21:05:01,547 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2020-05-04 21:05:01,593 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2020-05-04 21:05:01,627 INFO o.a.j.s.FileServer: Set new base='/Users/mmaamoun/simple/simpleanalytics/query-tests'

@@ -1,0 +1,11 @@
+mongo/macos/data
+mongo/macos/log
+mongo/debian/data
+mongo/debian/logs
+
+/db/data
+/db/logs
+
+/data
+
+

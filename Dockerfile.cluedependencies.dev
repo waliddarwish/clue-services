@@ -1,0 +1,135 @@
+FROM node:lts-slim
+
+RUN npm install -g nodemon
+RUN apt-get update -y
+RUN apt-get upgrade -y
+RUN apt-get install -y procps curl vim iputils-ping curl telnet net-tools traceroute libaio1 wget unzip
+
+WORKDIR /home/src/
+
+
+
+COPY ./app-module/package.json /home/src/app-module/
+COPY ./app-module/tsconfig*.json /home/src/app-module/
+
+COPY ./authentication-module/package.json /home/src/authentication-module/
+COPY ./authentication-module/tsconfig*.json /home/src/authentication-module/
+
+COPY ./catalog-module/package.json /home/src/catalog-module/
+COPY ./catalog-module/tsconfig*.json /home/src/catalog-module/
+
+COPY ./clue-dfs-module/package.json /home/src/clue-dfs-module/
+COPY ./clue-dfs-module/tsconfig*.json /home/src/clue-dfs-module/
+
+COPY ./connection-test-module/package.json /home/src/connection-test-module/
+COPY ./connection-test-module/tsconfig*.json /home/src/connection-test-module/
+
+COPY ./connection-tracking-module/package.json /home/src/connection-tracking-module/
+COPY ./connection-tracking-module/tsconfig*.json /home/src/connection-tracking-module/
+
+COPY ./database-module/package.json /home/src/database-module/
+COPY ./database-module/tsconfig*.json /home/src/database-module/
+
+COPY ./datasets-controller-module/package.json /home/src/datasets-controller-module/
+COPY ./datasets-controller-module/tsconfig*.json /home/src/datasets-controller-module/
+
+COPY ./globalization-module/package.json /home/src/globalization-module/
+COPY ./globalization-module/tsconfig*.json /home/src/globalization-module/
+
+COPY ./graph-data-structure/package.json /home/src/graph-data-structure/
+
+COPY ./log-module/package.json /home/src/log-module/
+COPY ./log-module/tsconfig*.json /home/src/log-module/
+
+COPY ./mail-module/package.json /home/src/mail-module/
+COPY ./mail-module/tsconfig*.json /home/src/mail-module/
+
+COPY ./metadata-coordination-module/package.json /home/src/metadata-coordination-module/
+COPY ./metadata-coordination-module/tsconfig*.json /home/src/metadata-coordination-module/
+
+COPY ./metadata-importing-module/package.json /home/src/metadata-importing-module/
+COPY ./metadata-importing-module/tsconfig*.json /home/src/metadata-importing-module/
+
+
+COPY ./object-schema/package.json /home/src/object-schema/
+COPY ./object-schema/tsconfig*.json /home/src/object-schema/
+
+COPY ./query-executor-module/package.json /home/src/query-executor-module/
+COPY ./query-executor-module/tsconfig*.json /home/src/query-executor-module/
+
+COPY ./query-generator-module/package.json /home/src/query-generator-module/
+COPY ./query-generator-module/tsconfig*.json /home/src/query-generator-module/
+
+
+COPY ./scheduler-module/package.json /home/src/scheduler-module/
+COPY ./scheduler-module/tsconfig*.json /home/src/scheduler-module/
+
+
+COPY ./document-retrieving-module/package.json /home/src/document-retrieving-module/
+COPY ./document-retrieving-module/tsconfig*.json /home/src/document-retrieving-module/
+
+
+
+RUN sh -c "cd /home/src/app-module/ && npm install"
+RUN sh -c "cd /home/src/authentication-module/ && npm install"
+RUN sh -c "cd /home/src/catalog-module/ && npm install"
+RUN sh -c "cd /home/src/clue-dfs-module/ && npm install"
+RUN sh -c "cd /home/src/connection-test-module/ && npm install"
+RUN sh -c "cd /home/src/connection-tracking-module/ && npm install"
+RUN sh -c "cd /home/src/database-module/ && npm install"
+RUN sh -c "cd /home/src/datasets-controller-module/ && npm install"
+RUN sh -c "cd /home/src/globalization-module/ && npm install"
+RUN sh -c "cd /home/src/graph-data-structure/ && npm install"
+RUN sh -c "cd /home/src/log-module/ && npm install"
+RUN sh -c "cd /home/src/mail-module/ && npm install"
+RUN sh -c "cd /home/src/metadata-coordination-module/ && npm install"
+RUN sh -c "cd /home/src/metadata-importing-module/ && npm install"
+RUN sh -c "cd /home/src/object-schema/ && npm install"
+RUN sh -c "cd /home/src/query-executor-module/ && npm install"
+RUN sh -c "cd /home/src/query-generator-module/ && npm install"
+RUN sh -c "cd /home/src/scheduler-module/ && npm install"
+RUN sh -c "cd /home/src/document-retrieving-module/ && npm install"
+
+
+
+COPY app-module/. /home/src/app-module/
+COPY authentication-module/. /home/src/authentication-module/
+COPY catalog-module/. /home/src/catalog-module/
+COPY clue-dfs-module/. /home/src/clue-dfs-module/
+COPY connection-test-module/. /home/src/connection-test-module/
+COPY connection-tracking-module/. /home/src/connection-tracking-module/
+COPY database-module/. /home/src/database-module/
+COPY datasets-controller-module/. /home/src/datasets-controller-module/
+COPY globalization-module/. /home/src/globalization-module/
+COPY graph-data-structure/. /home/src/graph-data-structure/
+COPY log-module/. /home/src/log-module/
+COPY mail-module/. /home/src/mail-module/
+COPY metadata-coordination-module/. /home/src/metadata-coordination-module/
+COPY metadata-importing-module/. /home/src/metadata-importing-module/
+COPY object-schema/. /home/src/object-schema/
+COPY query-executor-module/. /home/src/query-executor-module/
+COPY query-generator-module/. /home/src/query-generator-module/
+COPY scheduler-module/. /home/src/scheduler-module/
+COPY metadata-importer/metadata-mapping/. /home/src/metadata-importer/metadata-mapping/
+COPY document-retrieving-module/. /home/src/document-retrieving-module/
+
+
+RUN mkdir -p /opt/oracle
+RUN wget https://download.oracle.com/otn_software/linux/instantclient/instantclient-basic-linuxx64.zip
+RUN unzip instantclient-basic-linuxx64.zip
+
+RUN sh -c "echo /opt/oracle/instantclient_19_6 > /etc/ld.so.conf.d/oracle-instantclient.conf"
+RUN ldconfig
+
+
+ENV LD_LIBRARY_PATH=/home/src/instantclient_19_6
+
+RUN rm -if ./instantclient_19_6/*jdbc* ./instantclient_19_6/*occi* ./instantclient_19_6/*mysql* ./instantclient_19_6/*ipc1* ./instantclient_19_6/*jar ./instantclient_19_6/uidrvci ./instantclient_19_6/genezi ./instantclient_19_6/adrci
+RUN rm -rif instantclient-basic-linuxx64.zip
+
+
+
+
+
+
+

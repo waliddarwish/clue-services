@@ -1,0 +1,218 @@
+{
+
+    "tinyint": {
+        "usageType": "Number",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "smallint": {
+        "usageType": "Number",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "mediumint": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "sum"
+    },
+    "int": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "bigint": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "decimal": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "float": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "bit": {
+        "usageType": "Number",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "integer": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "real": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "dec": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "numeric": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "fixed": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+    "number": {
+        "usageType": "Number",
+        "usage": "Fact",
+        "defaultAggregation": "Sum"
+    },
+
+
+    "char": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "varchar": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "binary": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "varbinary": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "tinyblob": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "blob": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "mediumblob": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "longblob": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "tinytext": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "text": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "mediumtext": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "longtext": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "enum": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "set": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+
+    "date": {
+        "usageType": "Date",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "time": {
+        "usageType": "Timestamp",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "datetime": {
+        "usageType": "Date",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "timestamp": {
+        "usageType": "Timestamp",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "year": {
+        "usageType": "Date",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+
+    "json": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "geometry": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "point": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "linestring": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "polygon": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "geometrycollection": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "multilinestring": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "multipoint": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    },
+    "multipolygon": {
+        "usageType": "Text",
+        "usage": "Dimension",
+        "defaultAggregation": "Count"
+    }
+
+}

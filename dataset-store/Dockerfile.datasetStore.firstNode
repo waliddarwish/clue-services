@@ -1,0 +1,54 @@
+FROM  cockroachdb/cockroach:v20.1.2
+
+WORKDIR /opt/dataset-store
+RUN apt-get update -y && apt-get install -y procps
+RUN apt-get install -y net-tools
+RUN apt-get install -y curl
+RUN apt-get install -y vim
+RUN apt-get install -y iputils-ping
+RUN apt-get install -y curl
+RUN apt-get install -y telnet
+RUN apt-get install -y net-tools
+RUN apt-get install -y traceroute
+
+
+RUN mkdir certs 
+RUN mkdir safe
+
+
+COPY package.json .
+COPY upload-certs.js .
+
+RUN apt-get install -y curl
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+
+RUN apt-get install -y nodejs
+
+RUN npm install
+
+RUN mkdir -p /var/clue 
+COPY setup.sh /var/clue
+
+COPY setup-k8s.sh /var/clue
+
+RUN chmod 755 /var/clue/setup-k8s.sh
+
+COPY datasets.sql /var/clue/
+
+
+
+RUN cockroach cert create-ca --certs-dir=/opt/dataset-store/certs --ca-key=/opt/dataset-store/safe/ca.key
+RUN cockroach cert create-client root --certs-dir=/opt/dataset-store/certs --ca-key=/opt/dataset-store/safe/ca.key
+RUN cockroach cert create-node dataset-store-node-1 --certs-dir=/opt/dataset-store/certs --ca-key=/opt/dataset-store/safe/ca.key
+RUN cockroach cert create-client dsuser --certs-dir=/opt/dataset-store/certs  --ca-key=/opt/dataset-store/safe/ca.key
+
+RUN openssl pkcs8 -passin pass:4lzahraa2 -topk8 -inform PEM -outform DER -in /opt/dataset-store/certs/client.root.key -out /opt/dataset-store/certs/root.pk8 -passout pass:4lzahraa2
+RUN openssl pkcs8 -passin pass:4lzahraa2 -topk8 -inform PEM -outform DER -in /opt/dataset-store/certs/client.dsuser.key -out /opt/dataset-store/certs/dsuser.pk8 -passout pass:4lzahraa2
+
+
+VOLUME /opt/dataset-store/safe
+
+
+
+
+

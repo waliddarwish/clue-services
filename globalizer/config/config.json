@@ -1,0 +1,18 @@
+{
+    "privateInterface" : "localhost",
+    "port": 8300,
+    "catalogs": {
+        "poolSize": 16,
+        "connectTimeoutMS": 120000,
+        "socketTimeoutMS": 120000,
+        "reconnectInterval": 5000,
+        "reconnectTries": 180,
+        "initialConnectionRetryInterval" : 5000,
+        "hosts": [
+            {
+            "host": "mongos-router0",
+            "port": 27017
+            }
+        ]
+    }
+}

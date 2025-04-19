@@ -1,0 +1,64 @@
+    include ../common/maincss.pug
+    - var url = "www.clueanalytics.com/invites/"+ inviteId
+
+      body(yahoo="" bgcolor="#f6f8f1")
+        table(width="100%" bgcolor="#f6f8f1" border="0" cellpadding="0" cellspacing="0")
+          tr
+            td
+              //if (gte mso 9)|(IE)
+                table(width="600" align="center" cellpadding="0" cellspacing="0" border="0")
+                  tr
+                    td
+              table.content(bgcolor="#ffffff" align="center" cellpadding="0" cellspacing="0" border="0")
+                tr
+                  td.header(bgcolor="#3f51b5")
+                    //if (gte mso 9)|(IE)
+                      table(width="425" align="left" cellpadding="0" cellspacing="0" border="0")
+                        tr
+                          td
+                    table.col425(align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 425px;")
+                      tr
+                        td(height="70")
+                          table(width="100%" border="0" cellspacing="0" cellpadding="0")
+                            tr
+                              td.subhead(style="padding: 0 0 0 3px;")
+                                | Info Request
+                            tr
+                              td.h1(style="padding: 5px 0 0 0;")
+                                | <span class="clueTitle">Clue</span>Analytics
+                    //if (gte mso 9)|(IE)
+
+
+                tr
+                  td.innerpadding.borderbottom
+                    table(width="100%" border="0" cellspacing="0" cellpadding="0")
+                      tr
+                        td.h2
+                          |  Info Request message from #{name}
+                      tr
+                        td.bodycopy
+                          #{message}  
+
+                tr
+                  td.innerpadding.borderbottom
+                    img.fix(src="https://healthitanalytics.com/images/site/article_headers/_normal/GettyImages-1132660268.jpg" width="100%" border="0" alt="")
+                tr
+                  td.footer(bgcolor="#3f51b5")
+                    table(width="100%" border="0" cellspacing="0" cellpadding="0")
+                      tr
+                        td.footercopy(align="center")
+                          | replyto: #{email}
+                          | ® Copyright from Clue Analytics 2019
+                          br
+
+                      tr
+                        td(align="center" style="padding: 20px 0 0 0;")
+                          table(border="0" cellspacing="0" cellpadding="0")
+                            tr
+                              td(width="37" style="text-align: center; padding: 0 10px 0 10px;")
+                                a(href="http://www.facebook.com/")
+                                  img(src="https://www.newmarket.ca/TownGovernment/PublishingImages/social%20icons/Facebook%20Icon.png" width="37" height="37" alt="Facebook" border="0")
+                              td(width="37" style="text-align: center; padding: 0 10px 0 10px;")
+                                a(href="http://www.twitter.com/")
+                                  img(src="https://cdn3.iconfinder.com/data/icons/basicolor-reading-writing/24/077_twitter-512.png" width="37" height="37" alt="Twitter" border="0")
+              //if (gte mso 9)|(IE)

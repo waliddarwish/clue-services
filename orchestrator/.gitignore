@@ -1,0 +1,65 @@
+# compiled output
+/dist
+/node_modules
+/config/node.id
+/db/data
+/db/logs
+
+/cockroachdb/macos/data/
+/cockroachdb/macos/safe/
+/cockroachdb/macos/certs/
+
+/cockroachdb/linux/data/
+/cockroachdb/linux/safe/
+/cockroachdb/linux/certs/
+
+/config/ca.crt
+/config/client.dsuser.crt
+/config/client.dsuser.key
+/config/client.root.crt
+/config/client.root.key
+/config/dsuser.pk8
+/config/node.crt
+/config/node.key
+/config/root.pk8
+
+/mongo
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+
+# Tests
+/coverage
+/.nyc_output
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+nohup.out
+
+# Query test results
+queryOutputForTesting.txt
+/queryEngineOutput/
+
+/src/coverage

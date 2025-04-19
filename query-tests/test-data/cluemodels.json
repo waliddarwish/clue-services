@@ -1,0 +1,26 @@
+[{
+	"_id": {
+		"$oid": "5eb1278a5842f40f85226ba3"
+	},
+	"modelType": "public",
+	"showJoinsOnGraph": false,
+	"hideGraph": false,
+	"hideDataPreview": false,
+	"hidePropertySheet": false,
+	"name": "Postgres-Model",
+	"datasources": [
+		{
+			"datasourceType": "DatabaseConnection",
+			"_id": {
+				"$oid": "5eb1278a5842f40f85226ba4"
+			},
+			"datasourceId": "e033174a-5d98-4b63-a24a-bf7fb741a5ba"
+		}
+	],
+	"id": "fed15e38-1514-4dcd-932c-92dcdd5ed78f",
+	"userId": "da7a431a-5e05-4da1-8d75-db35c739952b",
+	"tenantId": "8763885b-c027-47a1-b5fe-a8b42abacf7a",
+	"lastAccess": 1.588668298994E+12,
+	"__v": 0
+}]
+

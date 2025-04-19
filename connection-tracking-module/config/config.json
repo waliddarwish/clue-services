@@ -1,0 +1,21 @@
+{
+    "privateInterface" : "localhost",
+    "orchestratorSeeds" : [
+    {
+        "server": "localhost",
+        "port": 8240
+    }],
+    "catalogs": {
+        "catalogConfig": {
+            "mongoConfig": {
+                "replicaSetName": "clueData01",
+                "hosts": [
+                    {
+                        "host": "127.0.0.1",
+                        "port": 8250
+                    }
+                ]
+            }
+        }
+    }
+}

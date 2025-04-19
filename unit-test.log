@@ -1,0 +1,458 @@
+./run-unit-test-locally.sh
+[0;32m[1m Running tests for app-module/ [0m
+
+> @clueanalytics/base-app-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/app-module
+> jest --coverage
+
+----------------|----------|----------|----------|----------|-------------------|
+File            |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------------|----------|----------|----------|----------|-------------------|
+All files       |    67.92 |       40 |    30.77 |    66.67 |                   |
+ app.context.ts |       75 |      100 |       50 |       75 |                10 |
+ app.module.ts  |    67.35 |       40 |    27.27 |    65.96 |... 02,103,104,106 |
+----------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for authentication-module/ [0m
+
+> authentication-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/authentication-module
+> jest --coverage
+
+---------------------------|----------|----------|----------|----------|-------------------|
+File                       |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+---------------------------|----------|----------|----------|----------|-------------------|
+All files                  |      100 |      100 |      100 |      100 |                   |
+ authentication.service.ts |      100 |      100 |      100 |      100 |                   |
+---------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for authenticator/ [0m
+
+> authenticator@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/authenticator
+> jest --coverage
+
+-----------------|----------|----------|----------|----------|-------------------|
+File             |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+-----------------|----------|----------|----------|----------|-------------------|
+All files        |    78.72 |       80 |    54.55 |    77.78 |                   |
+ auth.service.ts |    78.72 |       80 |    54.55 |    77.78 |... 02,104,105,109 |
+-----------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for catalog-module/ [0m
+
+> catalog-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/catalog-module
+> jest --coverage
+
+--------------------------------|----------|----------|----------|----------|-------------------|
+File                            |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+--------------------------------|----------|----------|----------|----------|-------------------|
+All files                       |    90.45 |    79.41 |    91.08 |    90.08 |                   |
+ Model                          |    94.87 |       75 |       90 |    94.59 |                   |
+  model.service.ts              |    94.87 |       75 |       90 |    94.59 |             44,68 |
+ Visualizations                 |      100 |    78.57 |      100 |      100 |                   |
+  visualization-book.service.ts |      100 |       75 |      100 |      100 |             12,13 |
+  visualization-page.service.ts |      100 |    83.33 |      100 |      100 |                12 |
+ catalog                        |    97.04 |    78.13 |    90.57 |    96.99 |                   |
+  catalog.service.ts            |    97.04 |    78.13 |    90.57 |    96.99 |    75,149,246,262 |
+ connections                    |      100 |       90 |      100 |      100 |                   |
+  connection.service.ts         |      100 |       90 |      100 |      100 |                13 |
+ datasets                       |    70.29 |       80 |    79.63 |    69.94 |                   |
+  dataset.service.ts            |    70.29 |       80 |    79.63 |    69.94 |... 68,396,399,400 |
+ datasource                     |      100 |    82.14 |      100 |      100 |                   |
+  datasource.service.ts         |      100 |    82.14 |      100 |      100 |   12,13,14,99,122 |
+ invitations                    |    98.15 |     87.5 |    94.44 |    98.04 |                   |
+  invitation.service.ts         |    98.15 |     87.5 |    94.44 |    98.04 |                82 |
+ metadata                       |    97.33 |       80 |      100 |    97.26 |                   |
+  metadata.service.ts           |    97.33 |       80 |      100 |    97.26 |            99,109 |
+ searching                      |      100 |    75.86 |      100 |      100 |                   |
+  search.service.ts             |      100 |    75.86 |      100 |      100 |... 23,24,25,26,27 |
+ subscription-plan              |      100 |       75 |      100 |      100 |                   |
+  subscription-plan.service.ts  |      100 |       75 |      100 |      100 |                13 |
+--------------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for clue-dfs-module/ [0m
+
+> clue-dfs-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/clue-dfs-module
+> jest --coverage
+
+-------------------------|----------|----------|----------|----------|-------------------|
+File                     |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+-------------------------|----------|----------|----------|----------|-------------------|
+All files                |    54.22 |    58.33 |    55.17 |    53.75 |                   |
+ ReadRemoteFileByLine.ts |       56 |       75 |    18.18 |       56 |... 37,38,44,45,49 |
+ clue-dfs.service.ts     |    53.45 |       50 |    77.78 |    52.73 |... 72,73,74,77,78 |
+-------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for connection-test-module/ [0m
+
+> connection-test-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/connection-test-module
+> jest --coverage
+
+----------------------------|----------|----------|----------|----------|-------------------|
+File                        |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------------------------|----------|----------|----------|----------|-------------------|
+All files                   |      100 |      100 |      100 |      100 |                   |
+ connection-test.service.ts |      100 |      100 |      100 |      100 |                   |
+----------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for connection-tester/ [0m
+
+> connection-tester@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/connection-tester
+> jest --coverage
+
+-------------------------------|----------|----------|----------|----------|-------------------|
+File                           |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+-------------------------------|----------|----------|----------|----------|-------------------|
+All files                      |    94.44 |     87.5 |    90.48 |    94.23 |                   |
+ connection-tester.service.ts  |      100 |      100 |      100 |      100 |                   |
+ connection.base-tester.ts     |       90 |       50 |    83.33 |       90 |                16 |
+ connection.oracler-tester.ts  |    92.86 |      100 |      100 |    92.86 |                29 |
+ connection.postgres-tester.ts |       90 |      100 |    83.33 |       90 |                21 |
+ connection.tester-factory.ts  |      100 |      100 |      100 |      100 |                   |
+-------------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for connection-tracking-module/ [0m
+
+> connection-tracking-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/connection-tracking-module
+> jest --coverage
+
+--------------------------------|----------|----------|----------|----------|-------------------|
+File                            |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+--------------------------------|----------|----------|----------|----------|-------------------|
+All files                       |    88.46 |    73.33 |    90.91 |       88 |                   |
+ connection-tracking.service.ts |    88.46 |    73.33 |    90.91 |       88 |... 90,193,194,201 |
+--------------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for database-module/ [0m
+
+> database-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/database-module
+> jest --coverage
+
+----------|----------|----------|----------|----------|-------------------|
+File      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------|----------|----------|----------|----------|-------------------|
+All files |        0 |        0 |        0 |        0 |                   |
+----------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for dataset-controller/ [0m
+
+> dataset-controller@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/dataset-controller
+> jest --coverage
+
+--------------------------|----------|----------|----------|----------|-------------------|
+File                      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+--------------------------|----------|----------|----------|----------|-------------------|
+All files                 |    77.44 |    74.26 |    70.59 |    77.04 |                   |
+ src                      |    77.72 |       75 |    66.67 |    77.29 |                   |
+  FileImporter.ts         |    92.02 |    85.87 |     87.5 |    91.83 |... 24,386,387,389 |
+  dataset-ctrl.service.ts |    58.06 |    43.75 |    56.25 |    57.52 |... 60,297,308,309 |
+ src/validator            |    74.19 |    66.67 |       80 |    74.19 |                   |
+  DateValidator.ts        |    55.56 |       50 |       60 |    55.56 |... 24,29,30,31,33 |
+  NumberValidator.ts      |      100 |      100 |      100 |      100 |                   |
+  TimeStampeValidator.ts  |      100 |      100 |      100 |      100 |                   |
+--------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for datasets-controller-module/ [0m
+
+> datasets-controller-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/datasets-controller-module
+> jest --coverage
+
+--------------------|----------|----------|----------|----------|-------------------|
+File                |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+--------------------|----------|----------|----------|----------|-------------------|
+All files           |    96.67 |      100 |    93.75 |    96.43 |                   |
+ dataset.service.ts |    96.67 |      100 |    93.75 |    96.43 |                41 |
+--------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for document-retriever/ [0m
+
+> document-retriever@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/document-retriever
+> jest --coverage
+
+-------------------------------|----------|----------|----------|----------|-------------------|
+File                           |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+-------------------------------|----------|----------|----------|----------|-------------------|
+All files                      |      100 |      100 |      100 |      100 |                   |
+ document-retriever.service.ts |      100 |      100 |      100 |      100 |                   |
+-------------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for document-retrieving-module/ [0m
+
+> document-retrieving-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/document-retrieving-module
+> jest --coverage
+
+---------------------|----------|----------|----------|----------|-------------------|
+File                 |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+---------------------|----------|----------|----------|----------|-------------------|
+All files            |    78.79 |       80 |      100 |    77.42 |                   |
+ document.service.ts |    78.79 |       80 |      100 |    77.42 |... 36,47,58,69,80 |
+---------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for globalization-module/ [0m
+
+> globalization-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/globalization-module
+> jest --coverage
+
+--------------------------|----------|----------|----------|----------|-------------------|
+File                      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+--------------------------|----------|----------|----------|----------|-------------------|
+All files                 |      100 |      100 |      100 |      100 |                   |
+ globalization.service.ts |      100 |      100 |      100 |      100 |                   |
+--------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for globalizer/ [0m
+
+> globalizer@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/globalizer
+> jest --coverage
+
+-----------------------|----------|----------|----------|----------|-------------------|
+File                   |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+-----------------------|----------|----------|----------|----------|-------------------|
+All files              |      100 |      100 |      100 |      100 |                   |
+ globalizer.service.ts |      100 |      100 |      100 |      100 |                   |
+-----------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for graph-data-structure/ [0m
+
+> graph-data-structure@1.9.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/graph-data-structure
+> mocha
+
+
+
+  Graph
+    Data structure
+      ✓ Should add nodes and list them.
+      ✓ Should chain addNode.
+      ✓ Should remove nodes.
+      ✓ Should chain removeNode.
+      ✓ Should add edges and query for adjacent nodes.
+      ✓ Should implicitly add nodes when edges are added.
+      ✓ Should chain addEdge.
+      ✓ Should remove edges.
+      ✓ Should chain removeEdge.
+      ✓ Should not remove nodes when edges are removed.
+      ✓ Should remove outgoing edges when a node is removed.
+      ✓ Should remove incoming edges when a node is removed.
+      ✓ Should compute indegree.
+      ✓ Should compute outdegree.
+    Algorithms
+      ✓ Should compute topological sort.
+      ✓ Should compute topological sort, excluding source nodes.
+      ✓ Should compute topological sort tricky case.
+      ✓ Should exclude source nodes with a cycle.
+      ✓ Should exclude source nodes with multiple cycles.
+      ✓ Should compute lowest common ancestors.
+    Edge cases and error handling
+      ✓ Should return empty array of adjacent nodes for unknown nodes.
+      ✓ Should do nothing if removing an edge that does not exist.
+      ✓ Should return indegree of 0 for unknown nodes.
+      ✓ Should return outdegree of 0 for unknown nodes.
+    Serialization
+      ✓ Should serialize a graph.
+      ✓ Should deserialize a graph.
+      ✓ Should chain deserialize a graph.
+      ✓ Should deserialize a graph passed to constructor.
+    Edge Weights
+      ✓ Should set and get an edge weight.
+      ✓ Should set edge weight via setEdgeWeight.
+      ✓ Should return weight of 1 if no weight set.
+    Dijkstra's Shortest Path Algorithm
+      ✓ Should compute shortest path on a single edge.
+      ✓ Should compute shortest path on two edges.
+      ✓ Should compute shortest path on example from Cormen text (p. 659).
+      ✓ Should throw error if source node not in graph.
+      ✓ Should throw error if dest node not in graph.
+      ✓ Should throw error if no path exists.
+      ✓ Should be robust to disconnected subgraphs.
+
+
+  38 passing (17ms)
+
+[0;32m[1m Running tests for log-module/ [0m
+
+> log-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/log-module
+> jest --coverage
+
+----------------|----------|----------|----------|----------|-------------------|
+File            |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------------|----------|----------|----------|----------|-------------------|
+All files       |    69.23 |      100 |    33.33 |    63.64 |                   |
+ log.service.ts |    69.23 |      100 |    33.33 |    63.64 |       32,38,40,42 |
+----------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for logger/ [0m
+
+> logger@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/logger
+> jest --coverage
+
+----------|----------|----------|----------|----------|-------------------|
+File      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------|----------|----------|----------|----------|-------------------|
+All files |        0 |        0 |        0 |        0 |                   |
+----------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for mail-module/ [0m
+
+> mail-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/mail-module
+> jest --coverage
+
+----------|----------|----------|----------|----------|-------------------|
+File      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------|----------|----------|----------|----------|-------------------|
+All files |        0 |        0 |        0 |        0 |                   |
+----------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for mailer/ [0m
+
+> mailer@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/mailer
+> jest --coverage
+
+----------|----------|----------|----------|----------|-------------------|
+File      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------|----------|----------|----------|----------|-------------------|
+All files |        0 |        0 |        0 |        0 |                   |
+----------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for metadata-coordination-module/ [0m
+
+> metadata-coordination-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/metadata-coordination-module
+> jest --coverage
+
+----------------------------------|----------|----------|----------|----------|-------------------|
+File                              |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------------------------------|----------|----------|----------|----------|-------------------|
+All files                         |      100 |      100 |      100 |      100 |                   |
+ metadata-coordination.service.ts |      100 |      100 |      100 |      100 |                   |
+----------------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for metadata-coordinator/ [0m
+
+> metadata-coordinator@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/metadata-coordinator
+> jest --coverage
+
+-----------------------------------|----------|----------|----------|----------|-------------------|
+File                               |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+-----------------------------------|----------|----------|----------|----------|-------------------|
+All files                          |    87.62 |    71.43 |    83.33 |    87.25 |                   |
+ src                               |    79.41 |    68.75 |     62.5 |    78.13 |                   |
+  metadata-coordinator.service.ts  |    79.41 |    68.75 |     62.5 |    78.13 |... 36,37,40,61,69 |
+ src/coordinators                  |    91.55 |       75 |    89.29 |    91.43 |                   |
+  metadata-coordinator.base.ts     |       90 |    66.67 |    90.91 |    89.66 |          34,80,84 |
+  metadata-coordinator.factory.ts  |      100 |      100 |      100 |      100 |                   |
+  metadata-coordinator.oracle.ts   |    93.75 |       50 |      100 |    93.75 |                40 |
+  metadata-coordinator.postgres.ts |    83.33 |      100 |       75 |    83.33 |              7,31 |
+-----------------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for metadata-importer/ [0m
+
+> metadata-importer@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/metadata-importer
+> jest --coverage
+
+--------------------------------|----------|----------|----------|----------|-------------------|
+File                            |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+--------------------------------|----------|----------|----------|----------|-------------------|
+All files                       |    97.47 |    68.97 |    91.67 |    98.06 |                   |
+ src                            |      100 |       80 |      100 |      100 |                   |
+  metadata-importer.service.ts  |      100 |       80 |      100 |      100 |             13,14 |
+ src/importers                  |     97.2 |    66.67 |    90.48 |    97.89 |                   |
+  metadata-importer.base.ts     |    89.47 |       50 |       90 |    94.44 |                31 |
+  metadata-importer.factory.ts  |      100 |      100 |      100 |      100 |                   |
+  metadata-importer.oracle.ts   |    98.25 |    66.67 |      100 |    98.25 |               227 |
+  metadata-importer.postgres.ts |    98.15 |    61.11 |       80 |    98.15 |               141 |
+--------------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for metadata-importing-module/ [0m
+
+> metadata-importing-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/metadata-importing-module
+> jest --coverage
+
+-------------------------------|----------|----------|----------|----------|-------------------|
+File                           |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+-------------------------------|----------|----------|----------|----------|-------------------|
+All files                      |      100 |      100 |      100 |      100 |                   |
+ metadata-importing.service.ts |      100 |      100 |      100 |      100 |                   |
+-------------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for object-schema/ [0m
+
+> object-schema@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/object-schema
+> jest --coverage
+
+----------|----------|----------|----------|----------|-------------------|
+File      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------|----------|----------|----------|----------|-------------------|
+All files |        0 |        0 |        0 |        0 |                   |
+----------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for orchestrator/ [0m
+
+> orchestrator@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/orchestrator
+> jest --coverage
+
+----------------------|----------|----------|----------|----------|-------------------|
+File                  |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------------------|----------|----------|----------|----------|-------------------|
+All files             |    78.33 |    60.94 |    86.79 |    78.29 |                   |
+ query                |    67.86 |    47.73 |    71.43 |    67.89 |                   |
+  query.service.ts    |    67.86 |    47.73 |    71.43 |    67.89 |... 02,206,207,208 |
+ security             |    95.59 |       90 |    96.88 |    95.45 |                   |
+  security.service.ts |    95.59 |       90 |    96.88 |    95.45 |        18,102,103 |
+----------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for query-executor-module/ [0m
+
+> query-executor-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/query-executor-module
+> jest --coverage
+
+---------------------------|----------|----------|----------|----------|-------------------|
+File                       |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+---------------------------|----------|----------|----------|----------|-------------------|
+All files                  |      100 |      100 |      100 |      100 |                   |
+ query-executor.service.ts |      100 |      100 |      100 |      100 |                   |
+---------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for query-executor/ [0m
+
+> query-executor@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/query-executor
+> jest --coverage
+
+----------------------------|----------|----------|----------|----------|-------------------|
+File                        |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------------------------|----------|----------|----------|----------|-------------------|
+All files                   |    92.19 |    83.33 |    84.62 |    92.06 |                   |
+ src                        |      100 |       80 |      100 |      100 |                   |
+  query-executor.service.ts |      100 |       80 |      100 |      100 |             18,19 |
+ src/executors              |    90.83 |    84.38 |    83.33 |    90.83 |                   |
+  executor-cockroach.ts     |     87.5 |      100 |       75 |     87.5 |             36,37 |
+  executor-oracle.ts        |    86.67 |       50 |       80 |    86.67 |             24,30 |
+  executor-postgres.ts      |    81.82 |      100 |    66.67 |    81.82 |             16,26 |
+  executor-state.ts         |      100 |      100 |      100 |      100 |                   |
+  executor.base.ts          |    87.88 |       80 |      100 |    87.88 |       37,54,65,75 |
+  executor.factory.ts       |      100 |      100 |      100 |      100 |                   |
+----------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for query-generator-module/ [0m
+
+> query-generator-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/query-generator-module
+> jest --coverage
+
+----------------------------|----------|----------|----------|----------|-------------------|
+File                        |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------------------------|----------|----------|----------|----------|-------------------|
+All files                   |      100 |      100 |      100 |      100 |                   |
+ query-generator.service.ts |      100 |      100 |      100 |      100 |                   |
+----------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for query-generator/ [0m
+
+> query-generator@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/query-generator
+> jest --coverage
+
+-----------------------------|----------|----------|----------|----------|-------------------|
+File                         |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+-----------------------------|----------|----------|----------|----------|-------------------|
+All files                    |    76.44 |    60.49 |    64.91 |    76.13 |                   |
+ src                         |    97.26 |       75 |    85.71 |    97.18 |                   |
+  query-generator.service.ts |    97.26 |       75 |    85.71 |    97.18 |             45,87 |
+ src/generators              |    84.82 |    69.17 |    80.56 |    85.11 |                   |
+  cockroach-generator.ts     |      100 |      100 |      100 |      100 |                   |
+  generator-constants.ts     |      100 |      100 |      100 |      100 |                   |
+  generator-state.ts         |      100 |      100 |      100 |      100 |                   |
+  generator.base.ts          |    85.45 |    68.42 |       75 |    85.94 |... 57,560,561,563 |
+  generator.factory.ts       |       25 |        0 |        0 |       25 |... 37,38,39,41,43 |
+  oracle-generator.ts        |      100 |       90 |      100 |      100 |                11 |
+  postgres-generator.ts      |      100 |      100 |      100 |      100 |                   |
+ src/state-machine           |    20.24 |     6.25 |    14.29 |    20.24 |                   |
+  GeneratorStateMachine.ts   |    20.24 |     6.25 |    14.29 |    20.24 |... 56,160,162,163 |
+-----------------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for scheduler-module/ [0m
+
+> scheduler-module@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/scheduler-module
+> jest --coverage
+
+----------------------|----------|----------|----------|----------|-------------------|
+File                  |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------------------|----------|----------|----------|----------|-------------------|
+All files             |       84 |      100 |    69.23 |    82.61 |                   |
+ scheduler.service.ts |       84 |      100 |    69.23 |    82.61 |      31,56,81,107 |
+----------------------|----------|----------|----------|----------|-------------------|
+[0;32m[1m Running tests for scheduler/ [0m
+
+> scheduler@1.1.0 test:cov /Users/wdarwish/SoftwareDevelopment/services/scheduler
+> jest --coverage
+
+----------|----------|----------|----------|----------|-------------------|
+File      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------|----------|----------|----------|----------|-------------------|
+All files |        0 |        0 |        0 |        0 |                   |
+----------|----------|----------|----------|----------|-------------------|
